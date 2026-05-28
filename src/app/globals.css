@@ -81,8 +81,8 @@ h4 {
   text-wrap: balance;
 }
 h1 {
-  font-size: clamp(60px, 8vw, 112px);
-  line-height: 1.02;
+  font-size: clamp(44px, 5.5vw, 80px);
+  line-height: 1.05;
   font-weight: 400;
   font-variation-settings: "opsz" 72;
 }
@@ -238,7 +238,7 @@ p {
 
 /* ============ HERO ============ */
 .hero {
-  padding: 160px 0 100px;
+  padding: 100px 0 80px;
   position: relative;
   overflow: hidden;
 }
@@ -515,7 +515,7 @@ section.block {
     padding: 96px 0;
   }
   .hero {
-    padding: 96px 0 64px;
+    padding: 72px 0 48px;
   }
 }
 
