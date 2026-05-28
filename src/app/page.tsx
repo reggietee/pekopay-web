@@ -45,13 +45,28 @@ export default function Home() {
       <main id="main-content">
       {/* ============ HERO ============ */}
       <section className="hero">
-        <div className="wrap hero-grid">
-          <div className="hero-copy">
+        <div className="wrap">
+          <div className="hero-intro">
+            <span className="eyebrow">Payment processing, rewarded</span>
+          </div>
+
+          <div className="hero-statement">
             <h1>
-              The <span className="italic">smarter</span> way to process
-              payments.
+              Every payment you process{" "}
+              <span className="italic">earns you money.</span>
             </h1>
-            <p className="hero-sub">Earn cashback on every transaction.</p>
+          </div>
+
+          <div className="hero-rate" aria-label="0.8% cashback rate">
+            <span className="hero-rate-plus">+</span>
+            <span className="hero-rate-num">0.8</span>
+            <span className="hero-rate-pct">%</span>
+            <span className="hero-rate-label">
+              cashback on<br />every transaction
+            </span>
+          </div>
+
+          <div className="hero-bottom">
             <p className="hero-body">
               PekoPay helps businesses accept payments while earning cashback on
               every transaction. Save money, improve cash flow, and grow your
@@ -65,100 +80,6 @@ export default function Home() {
               <a className="btn btn-outline btn-lg" href="#contact">
                 Talk to Sales
               </a>
-            </div>
-          </div>
-
-          <div className="hero-visual">
-            <div className="hero-card">
-              <div className="hero-card-top">
-                <span>Cashback ledger</span>
-                <span>● Live</span>
-              </div>
-              <div className="hero-card-amount">
-                <span className="currency">$</span>12,847
-                <span className="hero-card-decimal">.30</span>
-              </div>
-              <div className="hero-card-label">
-                Cashback earned this quarter
-              </div>
-
-              <div className="hero-spark" aria-hidden="true">
-                <svg
-                  viewBox="0 0 400 90"
-                  preserveAspectRatio="none"
-                  width="100%"
-                  height="100%"
-                >
-                  <defs>
-                    <linearGradient
-                      id="sparkFill"
-                      x1="0"
-                      x2="0"
-                      y1="0"
-                      y2="1"
-                    >
-                      <stop
-                        offset="0%"
-                        stopColor="#c08a2e"
-                        stopOpacity={0.25}
-                      />
-                      <stop
-                        offset="100%"
-                        stopColor="#c08a2e"
-                        stopOpacity={0}
-                      />
-                    </linearGradient>
-                  </defs>
-                  <path
-                    d="M0,70 L40,62 L80,66 L120,50 L160,54 L200,38 L240,44 L280,28 L320,32 L360,18 L400,22 L400,90 L0,90 Z"
-                    fill="url(#sparkFill)"
-                  />
-                  <path
-                    d="M0,70 L40,62 L80,66 L120,50 L160,54 L200,38 L240,44 L280,28 L320,32 L360,18 L400,22"
-                    fill="none"
-                    stroke="#c08a2e"
-                    strokeWidth="1.6"
-                  />
-                </svg>
-              </div>
-
-              <div className="hero-card-rows">
-                <div className="hero-row">
-                  <div className="left">
-                    <div className="ic">A</div>
-                    <span>Acme Co. — Invoice #4421</span>
-                  </div>
-                  <div>
-                    <span className="amt">$8,400.00</span>{" "}
-                    <span className="cashback">+$67.20</span>
-                  </div>
-                </div>
-                <div className="hero-row">
-                  <div className="left">
-                    <div className="ic">N</div>
-                    <span>Northwind Studio</span>
-                  </div>
-                  <div>
-                    <span className="amt">$2,150.00</span>{" "}
-                    <span className="cashback">+$17.20</span>
-                  </div>
-                </div>
-                <div className="hero-row">
-                  <div className="left">
-                    <div className="ic">S</div>
-                    <span>Sooke Landing Marina</span>
-                  </div>
-                  <div>
-                    <span className="amt">$12,900.00</span>{" "}
-                    <span className="cashback">+$103.20</span>
-                  </div>
-                </div>
-              </div>
-
-              <div className="hero-badge">
-                <span className="num">+0.8%</span>
-                <span className="txt">Every transaction, every time</span>
-              </div>
             </div>
           </div>
         </div>
