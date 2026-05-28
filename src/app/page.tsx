@@ -45,28 +45,13 @@ export default function Home() {
       <main id="main-content">
       {/* ============ HERO ============ */}
       <section className="hero">
-        <div className="wrap">
-          <div className="hero-intro">
-            <span className="eyebrow">Payment processing, rewarded</span>
-          </div>
-
-          <div className="hero-statement">
+        <div className="wrap hero-grid">
+          <div className="hero-copy">
             <h1>
-              Every payment you process{" "}
-              <span className="italic">earns you money.</span>
+              The <span className="italic">smarter</span> way to process
+              payments.
             </h1>
-          </div>
-
-          <div className="hero-rate" aria-label="0.8% cashback rate">
-            <span className="hero-rate-plus">+</span>
-            <span className="hero-rate-num">0.8</span>
-            <span className="hero-rate-pct">%</span>
-            <span className="hero-rate-label">
-              cashback on<br />every transaction
-            </span>
-          </div>
-
-          <div className="hero-bottom">
+            <p className="hero-sub">Earn cashback on every transaction.</p>
             <p className="hero-body">
               PekoPay helps businesses accept payments while earning cashback on
               every transaction. Save money, improve cash flow, and grow your
@@ -80,6 +65,20 @@ export default function Home() {
               <a className="btn btn-outline btn-lg" href="#contact">
                 Talk to Sales
               </a>
+            </div>
+          </div>
+
+          <div className="hero-visual">
+            <div className="hero-img-wrap">
+              <img
+                src="/hero-person.jpg"
+                alt="Business professional working in an office"
+                className="hero-img"
+              />
+              <div className="hero-img-badge">
+                <span className="num">+0.8%</span>
+                <span className="txt">Cashback on every transaction</span>
+              </div>
             </div>
           </div>
         </div>
