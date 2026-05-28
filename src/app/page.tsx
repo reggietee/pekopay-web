@@ -22,8 +22,11 @@ export default function Home() {
       <nav className="nav">
         <div className="nav-inner">
           <a href="#" className="logo" aria-label="PekoPay home">
-            <span className="logo-mark">P</span>
-            <span>PekoPay</span>
+            <img
+              src="/pekopay-logo.svg"
+              alt="PekoPay"
+              className="logo-img"
+            />
           </a>
           <div className="nav-links">
             <a href="#solution">Solutions</a>
@@ -540,8 +543,11 @@ export default function Home() {
           <div className="foot-grid">
             <div className="foot-brand">
               <a href="#" className="logo">
-                <span className="logo-mark">P</span>
-                <span>PekoPay</span>
+                <img
+                  src="/pekopay-logo.svg"
+                  alt="PekoPay"
+                  className="logo-img logo-img-footer"
+                />
               </a>
               <p>
                 The smarter way to process payments — built for businesses that
