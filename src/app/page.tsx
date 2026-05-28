@@ -99,12 +99,12 @@ export default function Home() {
                     >
                       <stop
                         offset="0%"
-                        stopColor="#c08a2e"
+                        stopColor="#5b6abf"
                         stopOpacity={0.25}
                       />
                       <stop
                         offset="100%"
-                        stopColor="#c08a2e"
+                        stopColor="#5b6abf"
                         stopOpacity={0}
                       />
                     </linearGradient>
@@ -116,7 +116,7 @@ export default function Home() {
                   <path
                     d="M0,70 L40,62 L80,66 L120,50 L160,54 L200,38 L240,44 L280,28 L320,32 L360,18 L400,22"
                     fill="none"
-                    stroke="#c08a2e"
+                    stroke="#5b6abf"
                     strokeWidth="1.6"
                   />
                 </svg>
