@@ -930,10 +930,11 @@ section.block {
   grid-template-columns: auto 1fr auto;
   gap: 18px;
   align-items: center;
-  background: var(--white);
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  padding: 18px 20px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--line);
+}
+.currency-cards .item:last-child {
+  border-bottom: none;
 }
 .currency-cards .item h3 {
   font-family: var(--font-sans), system-ui, sans-serif;
@@ -965,11 +966,11 @@ section.block {
   aspect-ratio: 1;
   max-width: 460px;
   margin-left: auto;
-  background: var(--white);
-  border: 1px solid var(--line);
+  background: var(--ink);
+  color: var(--cream-3);
   border-radius: var(--radius-xl);
   padding: 32px;
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-lg);
   position: relative;
   display: flex;
   flex-direction: column;
@@ -985,11 +986,11 @@ section.block {
   font-size: 120px;
   line-height: 0.9;
   letter-spacing: -0.04em;
-  color: var(--ink);
+  color: var(--cream-3);
 }
 .globe-num .plus {
   font-style: italic;
-  color: var(--gold-deep);
+  color: var(--gold-soft);
   font-weight: 300;
 }
 .globe-label {
@@ -997,7 +998,7 @@ section.block {
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  color: var(--muted);
+  color: rgba(250, 246, 237, 0.6);
 }
 .globe-pills {
   display: flex;
@@ -1006,18 +1007,18 @@ section.block {
 }
 .globe-pills span {
   padding: 6px 12px;
-  background: var(--cream-3);
-  border: 1px solid var(--line);
+  background: rgba(250, 246, 237, 0.08);
+  border: 1px solid rgba(250, 246, 237, 0.12);
   border-radius: 999px;
   font-family: var(--font-mono), ui-monospace, monospace;
   font-size: 11px;
-  color: var(--ink-soft);
+  color: rgba(250, 246, 237, 0.6);
   letter-spacing: 0.05em;
 }
 .globe-pills span.hot {
-  background: var(--ink);
-  color: var(--gold-soft);
-  border-color: var(--ink);
+  background: var(--gold-soft);
+  color: var(--ink);
+  border-color: var(--gold-soft);
 }
 @media (max-width: 900px) {
   .currencies-grid {
