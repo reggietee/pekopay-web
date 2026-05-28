@@ -56,7 +56,7 @@ export default function CashbackCalculator() {
         <div className="calc-rate">
           <span className="dot" />
           Current effective rate:{" "}
-          <span style={{ color: "var(--gold-deep)", marginLeft: 4 }}>
+          <span className="calc-rate-value">
             {(rate * 100).toFixed(2)}%
           </span>
         </div>

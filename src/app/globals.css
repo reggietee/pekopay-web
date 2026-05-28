@@ -699,6 +699,10 @@ section.block {
   align-items: center;
   gap: 8px;
 }
+.calc-rate-value {
+  color: var(--gold-deep);
+  margin-left: 4px;
+}
 .calc-rate .dot {
   width: 8px;
   height: 8px;
@@ -1294,6 +1298,37 @@ section.block {
     grid-template-columns: 1fr;
     gap: 48px;
   }
+}
+
+/* ============ CLOSING CTA ============ */
+.cta-sec {
+  padding-bottom: 0;
+}
+.cta-inner {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 96px 0;
+  border-top: 1px solid var(--line);
+}
+.cta-inner h2 {
+  font-size: clamp(32px, 4vw, 52px);
+}
+.cta-body {
+  margin-top: 20px;
+  font-size: 18px;
+  color: var(--ink-soft);
+  line-height: 1.6;
+  max-width: 540px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.cta-actions {
+  margin-top: 36px;
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 /* ============ FOOTER ============ */

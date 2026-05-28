@@ -62,6 +62,9 @@ export default function Home() {
                 Start Now
                 <ArrowSvg />
               </a>
+              <a className="btn btn-outline btn-lg" href="#contact">
+                Talk to Sales
+              </a>
             </div>
           </div>
 
@@ -499,6 +502,31 @@ export default function Home() {
                 <span className="benefit-num">— 03</span>
                 <p>Help businesses maximize their savings</p>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ============ CLOSING CTA ============ */}
+      <section className="block cta-sec" id="contact">
+        <div className="wrap">
+          <div className="cta-inner">
+            <h2>
+              Ready to earn cashback on{" "}
+              <span className="accent-italic">every payment?</span>
+            </h2>
+            <p className="cta-body">
+              Join businesses across Canada that are saving money on every
+              transaction with PekoPay. Get started in minutes.
+            </p>
+            <div className="cta-actions">
+              <a className="btn btn-gold btn-lg" href="#signup">
+                Get Started
+                <ArrowSvg />
+              </a>
+              <a className="btn btn-outline btn-lg" href="#contact">
+                Talk to Sales
+              </a>
             </div>
           </div>
         </div>
