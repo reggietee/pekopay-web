@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
-import { DM_Sans, JetBrains_Mono, Fraunces } from "next/font/google";
+import { Figtree, JetBrains_Mono, Literata } from "next/font/google";
 import "./globals.css";
 
-const dmSans = DM_Sans({
+const figtree = Figtree({
   variable: "--font-sans",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
 });
 
 const jetbrainsMono = JetBrains_Mono({
@@ -14,10 +13,10 @@ const jetbrainsMono = JetBrains_Mono({
   weight: ["400", "500"],
 });
 
-const fraunces = Fraunces({
+const literata = Literata({
   variable: "--font-serif",
   subsets: ["latin"],
-  axes: ["SOFT", "opsz"],
+  axes: ["opsz"],
 });
 
 export const metadata: Metadata = {
@@ -34,7 +33,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${dmSans.variable} ${jetbrainsMono.variable} ${fraunces.variable}`}
+      className={`${figtree.variable} ${jetbrainsMono.variable} ${literata.variable}`}
     >
       <body>
         <a href="#main-content" className="skip-link">
