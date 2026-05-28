@@ -885,70 +885,9 @@ section.block {
   color: var(--muted);
 }
 
-.globe {
-  aspect-ratio: 1;
-  max-width: 460px;
-  margin-left: auto;
-  background: var(--white);
-  border: 1px solid var(--line);
-  border-radius: var(--radius-xl);
-  padding: 32px;
-  box-shadow: var(--shadow-md);
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.globe-head {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.globe-num {
-  font-family: var(--font-serif);
-  font-size: 120px;
-  line-height: 0.9;
-  letter-spacing: -0.04em;
-  color: var(--ink);
-}
-.globe-num .plus {
-  font-style: italic;
-  color: var(--gold-deep);
-  font-weight: 300;
-}
-.globe-label {
-  font-family: var(--font-mono), ui-monospace, monospace;
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: var(--muted);
-}
-.globe-pills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-.globe-pills span {
-  padding: 6px 12px;
-  background: var(--cream-3);
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  font-family: var(--font-mono), ui-monospace, monospace;
-  font-size: 11px;
-  color: var(--ink-soft);
-  letter-spacing: 0.05em;
-}
-.globe-pills span.hot {
-  background: var(--ink);
-  color: var(--gold-soft);
-  border-color: var(--ink);
-}
 @media (max-width: 900px) {
   .currencies-grid {
     grid-template-columns: 1fr;
-  }
-  .globe {
-    margin: 0 auto;
   }
 }
 
@@ -1347,9 +1286,6 @@ footer {
   font-family: var(--font-serif);
   font-size: 30px;
   line-height: 1.2;
-}
-.globe-label-sub {
-  margin-top: 8px;
 }
 .spotlight-sec {
   padding-top: 0;
