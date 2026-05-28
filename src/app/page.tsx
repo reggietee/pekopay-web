@@ -72,95 +72,15 @@ export default function Home() {
           </div>
 
           <div className="hero-visual">
-            <div className="hero-card">
-              <div className="hero-card-top">
-                <span>Cashback ledger</span>
-                <span>● Live</span>
-              </div>
-              <div className="hero-card-amount">
-                <span className="currency">$</span>12,847
-                <span className="hero-card-decimal">.30</span>
-              </div>
-              <div className="hero-card-label">
-                Cashback earned this quarter
-              </div>
-
-              <div className="hero-spark" aria-hidden="true">
-                <svg
-                  viewBox="0 0 400 90"
-                  preserveAspectRatio="none"
-                  width="100%"
-                  height="100%"
-                >
-                  <defs>
-                    <linearGradient
-                      id="sparkFill"
-                      x1="0"
-                      x2="0"
-                      y1="0"
-                      y2="1"
-                    >
-                      <stop
-                        offset="0%"
-                        stopColor="#5b6abf"
-                        stopOpacity={0.25}
-                      />
-                      <stop
-                        offset="100%"
-                        stopColor="#5b6abf"
-                        stopOpacity={0}
-                      />
-                    </linearGradient>
-                  </defs>
-                  <path
-                    d="M0,70 L40,62 L80,66 L120,50 L160,54 L200,38 L240,44 L280,28 L320,32 L360,18 L400,22 L400,90 L0,90 Z"
-                    fill="url(#sparkFill)"
-                  />
-                  <path
-                    d="M0,70 L40,62 L80,66 L120,50 L160,54 L200,38 L240,44 L280,28 L320,32 L360,18 L400,22"
-                    fill="none"
-                    stroke="#5b6abf"
-                    strokeWidth="1.6"
-                  />
-                </svg>
-              </div>
-
-              <div className="hero-card-rows">
-                <div className="hero-row">
-                  <div className="left">
-                    <div className="ic">A</div>
-                    <span>Acme Co. — Invoice #4421</span>
-                  </div>
-                  <div>
-                    <span className="amt">$8,400.00</span>{" "}
-                    <span className="cashback">+$67.20</span>
-                  </div>
-                </div>
-                <div className="hero-row">
-                  <div className="left">
-                    <div className="ic">N</div>
-                    <span>Northwind Studio</span>
-                  </div>
-                  <div>
-                    <span className="amt">$2,150.00</span>{" "}
-                    <span className="cashback">+$17.20</span>
-                  </div>
-                </div>
-                <div className="hero-row">
-                  <div className="left">
-                    <div className="ic">S</div>
-                    <span>Sooke Landing Marina</span>
-                  </div>
-                  <div>
-                    <span className="amt">$12,900.00</span>{" "}
-                    <span className="cashback">+$103.20</span>
-                  </div>
-                </div>
-              </div>
-
-              <div className="hero-badge">
+            <div className="hero-img-wrap">
+              <img
+                src="/hero-person.jpg"
+                alt="Business professional working in an office"
+                className="hero-img"
+              />
+              <div className="hero-img-badge">
                 <span className="num">+0.8%</span>
-                <span className="txt">Every transaction, every time</span>
+                <span className="txt">Cashback on every transaction</span>
               </div>
             </div>
           </div>
@@ -442,9 +362,11 @@ export default function Home() {
         <div className="spotlight">
           <div className="spotlight-img">
             <span className="spotlight-img-tag">Case study</span>
-            <div className="placeholder-art">
-              [ Photo: Sooke Landing Marina — coastal aerial ]
-            </div>
+            <img
+              src="/sooke-marina.jpg"
+              alt="Aerial view of Sooke Harbour Marina on Vancouver Island"
+              className="spotlight-photo"
+            />
             <span className="spotlight-img-caption">
               — Vancouver Island, British Columbia
             </span>
