@@ -278,37 +278,15 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="globe">
-              <div className="globe-head">
-                <div>
-                  <div className="globe-label">Settle in</div>
-                  <div className="globe-num">
-                    100<span className="plus">+</span>
-                  </div>
-                  <div className="globe-label globe-label-sub">
-                    currencies worldwide
-                  </div>
-                </div>
-              </div>
-              <div className="globe-pills">
-                <span className="hot">CAD</span>
-                <span className="hot">USD</span>
-                <span>EUR</span>
-                <span>GBP</span>
-                <span>JPY</span>
-                <span>AUD</span>
-                <span>CHF</span>
-                <span>SGD</span>
-                <span>HKD</span>
-                <span>NZD</span>
-                <span>SEK</span>
-                <span>NOK</span>
-                <span>DKK</span>
-                <span>MXN</span>
-                <span>BRL</span>
-                <span>ZAR</span>
-                <span>INR</span>
-                <span>+84</span>
+            <div className="hero-img-wrap">
+              <img
+                src="/traveller.jpg"
+                alt="Traveller making a payment abroad"
+                className="hero-img"
+              />
+              <div className="hero-img-badge">
+                <span className="num">100+</span>
+                <span className="txt">Currencies worldwide</span>
               </div>
             </div>
           </div>
