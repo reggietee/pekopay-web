@@ -359,9 +359,11 @@ export default function Home() {
         <div className="spotlight">
           <div className="spotlight-img">
             <span className="spotlight-img-tag">Case study</span>
-            <div className="placeholder-art">
-              [ Photo: Sooke Landing Marina — coastal aerial ]
-            </div>
+            <img
+              src="/sooke-marina.jpg"
+              alt="Aerial view of Sooke Harbour Marina on Vancouver Island"
+              className="spotlight-photo"
+            />
             <span className="spotlight-img-caption">
               — Vancouver Island, British Columbia
             </span>
