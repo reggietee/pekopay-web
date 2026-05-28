@@ -23,7 +23,7 @@ export default function Home() {
         <div className="nav-inner">
           <a href="#" className="logo" aria-label="PekoPay home">
             <img
-              src="/pekopay-logo.svg"
+              src="/pekopay-logo-mockup.png"
               alt="PekoPay"
               className="logo-img"
             />
@@ -444,7 +444,7 @@ export default function Home() {
             <div className="foot-brand">
               <a href="#" className="logo">
                 <img
-                  src="/pekopay-logo.svg"
+                  src="/pekopay-logo-mockup.png"
                   alt="PekoPay"
                   className="logo-img logo-img-footer"
                 />
