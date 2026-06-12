@@ -43,7 +43,7 @@ export default function Spotlight() {
           <div className="spotlight-img">
             <span className="spotlight-img-tag">Case study</span>
             <img
-              src="/sooke-marina.jpg"
+              src="/pemberton-hero.jpg"
               alt="Pemberton Holmes Real Estate"
               className="spotlight-photo"
             />
