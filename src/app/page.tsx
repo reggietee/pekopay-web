@@ -1,5 +1,7 @@
 import CashbackCalculator from "@/components/CashbackCalculator";
 import MobileMenu from "@/components/MobileMenu";
+import NavMenu from "@/components/NavMenu";
+import Spotlight from "@/components/Spotlight";
 
 function ArrowSvg() {
   return (
@@ -28,11 +30,7 @@ export default function Home() {
               className="logo-img"
             />
           </a>
-          <div className="nav-links">
-            <a href="#solution">Solutions</a>
-            <a href="#cashback">Cashback</a>
-            <a href="#partner">Partnerships</a>
-          </div>
+          <NavMenu />
           <div className="nav-cta">
             <a className="btn btn-ghost" href="#signin">
               Sign In
@@ -94,18 +92,16 @@ export default function Home() {
             Trusted by businesses in BC &amp; beyond
           </div>
           <div className="trusted-logos">
-            <span className="trusted-logo">
-              <span className="dot" />
-              Joumaa-Johnson
-            </span>
-            <span className="trusted-logo">
-              <span className="dot" />
-              SookeLanding
-            </span>
-            <span className="trusted-logo">
-              <span className="dot" />
-              VanIsleGroup
-            </span>
+            <img
+              src="/logo-stratapress.png"
+              alt="StrataPress"
+              className="trusted-logo-img"
+            />
+            <img
+              src="/logo-pemberton.jpg"
+              alt="Pemberton Holmes"
+              className="trusted-logo-img"
+            />
           </div>
         </div>
       </section>
@@ -172,15 +168,37 @@ export default function Home() {
             </div>
 
             <div className="invoice-copy">
-              <span className="eyebrow">What you get</span>
+              <span className="eyebrow">Payment options</span>
               <h3 className="invoice-copy-heading">
-                One workflow. Three wins, every invoice.
+                Every way to get paid, in one place.
               </h3>
               <ul className="checklist">
-                <li>Accept online payments from clients effortlessly</li>
-                <li>Track invoices and get paid faster</li>
-                <li>Earn cashback for every transaction</li>
+                <li>Batch Processing</li>
+                <li>Invoice</li>
+                <li>Payment Links</li>
+                <li>Subscriptions</li>
               </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ============ QUICKBOOKS INTEGRATION ============ */}
+      <section className="qb-sec">
+        <div className="wrap">
+          <div className="qb-callout">
+            <img
+              src="/logo-quickbooks.png"
+              alt="QuickBooks"
+              className="qb-logo"
+            />
+            <div className="qb-copy">
+              <h3>Works seamlessly with QuickBooks.</h3>
+              <p>
+                Sync your payments and cashback directly into QuickBooks. No
+                manual entry, no reconciliation headaches — just clean books
+                that stay up to date automatically.
+              </p>
             </div>
           </div>
         </div>
@@ -336,35 +354,7 @@ export default function Home() {
       </section>
 
       {/* ============ SPOTLIGHT ============ */}
-      <section className="block spotlight-sec">
-        <div className="spotlight">
-          <div className="spotlight-img">
-            <span className="spotlight-img-tag">Case study</span>
-            <img
-              src="/sooke-marina.jpg"
-              alt="Aerial view of Sooke Harbour Marina on Vancouver Island"
-              className="spotlight-photo"
-            />
-            <span className="spotlight-img-caption">
-              — Vancouver Island, British Columbia
-            </span>
-          </div>
-          <div className="spotlight-body">
-            <span className="eyebrow">Company spotlight</span>
-            <h2>Sooke Landing Marina</h2>
-            <p className="sub">A business thriving with PekoPay.</p>
-            <p className="body">
-              Sooke Landing Marina processes payments seamlessly with PekoPay,
-              earning cashback while providing customers with smooth, secure
-              transactions.
-            </p>
-            <a href="#solution" className="spotlight-link">
-              Learn more
-              <ArrowSvg />
-            </a>
-          </div>
-        </div>
-      </section>
+      <Spotlight />
 
       {/* ============ PARTNER PROGRAM ============ */}
       <section className="block partner-sec" id="partner">
@@ -406,6 +396,60 @@ export default function Home() {
                 <p>Help businesses maximize their savings</p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ============ TESTIMONIALS ============ */}
+      <section className="block testimonials-sec">
+        <div className="wrap">
+          <div className="sec-head-center">
+            <h2>
+              What our customers{" "}
+              <span className="accent-italic">are saying.</span>
+            </h2>
+          </div>
+
+          <div className="testimonials-grid">
+            <figure className="testimonial">
+              <blockquote>
+                We&apos;ve had a great experience working with the PekoPay team.
+                Their platform has been a valuable addition to our operations,
+                providing a simple and efficient way to manage payments. What
+                stands out most is their responsiveness and willingness to
+                support our team whenever needed. It&apos;s clear they care
+                about their partners and are committed to continuously improving
+                their service. We appreciate the relationship and look forward to
+                continuing to work together.
+              </blockquote>
+              <figcaption>
+                <img
+                  src="/logo-pemberton.jpg"
+                  alt="Pemberton Holmes"
+                  className="testimonial-logo"
+                />
+              </figcaption>
+            </figure>
+
+            <figure className="testimonial">
+              <blockquote>
+                We&apos;ve had an excellent experience working with PekoPay. The
+                onboarding process was smooth, and their team has been incredibly
+                responsive and helpful in getting our payment gateway and
+                subscription management set up properly. Their support has been
+                outstanding, and the processing rates are very competitive.
+                It&apos;s refreshing to work with a company that is both easy to
+                reach and genuinely invested in helping its clients succeed.
+                Highly recommended from the team at StrataPress.
+              </blockquote>
+              <figcaption>
+                <img
+                  src="/logo-stratapress.png"
+                  alt="StrataPress"
+                  className="testimonial-logo"
+                />
+              </figcaption>
+            </figure>
           </div>
         </div>
       </section>

@@ -56,11 +56,17 @@ export default function MobileMenu() {
           <a href="#solution" onClick={close}>
             Solutions
           </a>
-          <a href="#cashback" onClick={close}>
-            Cashback
+          <a href="#solution" onClick={close}>
+            Features
           </a>
-          <a href="#partner" onClick={close}>
-            Partnerships
+          <a href="#" onClick={close}>
+            Developer
+          </a>
+          <a href="#" onClick={close}>
+            Resources
+          </a>
+          <a href="#pricing" onClick={close}>
+            Pricing
           </a>
         </div>
         <div className="mobile-drawer-ctas">
