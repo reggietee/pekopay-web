@@ -1701,6 +1701,105 @@ button:focus-visible {
 }
 
 /* ============ SOLUTION / CONTENT PAGES ============ */
+/* Feature card grid (reused on content pages) */
+.feature-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+}
+.feature-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 36px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+}
+.feature-card h3 {
+  font-size: 24px;
+}
+.feature-card .sub {
+  margin-top: 10px;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 300;
+  font-size: 18px;
+  color: var(--gold-deep);
+}
+.feature-card .intro {
+  margin-top: 16px;
+  font-size: 15px;
+  color: var(--ink-soft);
+  line-height: 1.6;
+}
+.feature-card .checklist {
+  margin-top: 18px;
+}
+.feature-card .checklist li {
+  font-size: 15px;
+}
+.feature-card .note {
+  margin-top: 20px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+  font-size: 14px;
+  font-style: italic;
+  color: var(--muted);
+  line-height: 1.5;
+}
+/* Coming-soon accounts mockup (payment hero) */
+.pay-accounts {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+  padding: 28px 32px;
+  max-width: 420px;
+  margin-left: auto;
+  width: 100%;
+}
+.pay-accounts-label {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+.pay-account-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--line);
+}
+.pay-account-row:last-child {
+  border-bottom: none;
+}
+.pay-account-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ink);
+}
+.pay-account-sub {
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 2px;
+}
+.pay-account-bal {
+  font-family: var(--font-serif);
+  font-size: 22px;
+  color: var(--gold-deep);
+  font-variant-numeric: tabular-nums;
+}
+@media (max-width: 900px) {
+  .pay-accounts {
+    margin: 0 auto;
+  }
+}
+
+
 .solution-phone {
   width: 100%;
   max-width: 460px;
