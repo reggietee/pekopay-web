@@ -1707,6 +1707,14 @@ button:focus-visible {
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 24px;
 }
+.feature-cards.two-col {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+@media (max-width: 760px) {
+  .feature-cards.two-col {
+    grid-template-columns: 1fr;
+  }
+}
 .feature-card {
   background: var(--white);
   border: 1px solid var(--line);
@@ -1748,6 +1756,29 @@ button:focus-visible {
   color: var(--muted);
   line-height: 1.5;
 }
+/* Perk cards */
+.perk-logo {
+  height: 40px;
+  width: auto;
+  max-width: 190px;
+  object-fit: contain;
+  object-position: left center;
+  margin-bottom: 22px;
+}
+.perk-card .body {
+  font-size: 15px;
+  color: var(--ink-soft);
+  line-height: 1.65;
+  margin-top: 4px;
+}
+.perk-actions {
+  margin-top: auto;
+  padding-top: 24px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
 /* Pricing fee cards */
 .price-grid {
   display: grid;
