@@ -1,6 +1,8 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
+import Link from "next/link";
+import { NAV, PRIMARY_CTA } from "./navConfig";
 
 export default function MobileMenu() {
   const [open, setOpen] = useState(false);
@@ -53,29 +55,31 @@ export default function MobileMenu() {
         aria-label="Mobile navigation"
       >
         <div className="mobile-drawer-links">
-          <a href="#solution" onClick={close}>
-            Solutions
-          </a>
-          <a href="#solution" onClick={close}>
-            Features
-          </a>
-          <a href="#" onClick={close}>
-            Developer
-          </a>
-          <a href="#" onClick={close}>
-            Resources
-          </a>
-          <a href="#pricing" onClick={close}>
-            Pricing
-          </a>
+          {NAV.map((item) =>
+            item.children ? (
+              <div key={item.label} className="mobile-drawer-group">
+                <span className="mobile-drawer-group-label">{item.label}</span>
+                {item.children.map((child) => (
+                  <Link key={child.label} href={child.href} onClick={close}>
+                    {child.label}
+                  </Link>
+                ))}
+              </div>
+            ) : (
+              <Link key={item.label} href={item.href ?? "#"} onClick={close}>
+                {item.label}
+              </Link>
+            )
+          )}
         </div>
         <div className="mobile-drawer-ctas">
-          <a className="btn btn-ghost" href="#signin" onClick={close}>
-            Sign In
-          </a>
-          <a className="btn btn-dark" href="#signup" onClick={close}>
-            Get Started
-          </a>
+          <Link
+            className="btn btn-dark"
+            href={PRIMARY_CTA.href}
+            onClick={close}
+          >
+            {PRIMARY_CTA.label}
+          </Link>
         </div>
       </nav>
     </>

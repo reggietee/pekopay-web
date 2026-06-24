@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Live-site capture scratch (page reskin reference)
+scripts/live_capture/

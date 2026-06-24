@@ -1,6 +1,6 @@
 import CashbackCalculator from "@/components/CashbackCalculator";
-import MobileMenu from "@/components/MobileMenu";
-import NavMenu from "@/components/NavMenu";
+import SiteFooter from "@/components/SiteFooter";
+import SiteHeader from "@/components/SiteHeader";
 import Spotlight from "@/components/Spotlight";
 
 function ArrowSvg() {
@@ -20,28 +20,7 @@ function ArrowSvg() {
 export default function Home() {
   return (
     <>
-      {/* ============ NAV ============ */}
-      <nav className="nav">
-        <div className="nav-inner">
-          <a href="#" className="logo" aria-label="PekoPay home">
-            <img
-              src="/pekopay-logo-mockup.png"
-              alt="PekoPay"
-              className="logo-img"
-            />
-          </a>
-          <NavMenu />
-          <div className="nav-cta">
-            <a className="btn btn-ghost" href="#signin">
-              Sign In
-            </a>
-            <a className="btn btn-dark" href="#signup">
-              Get Started
-            </a>
-          </div>
-          <MobileMenu />
-        </div>
-      </nav>
+      <SiteHeader />
 
       <main id="main-content">
       {/* ============ HERO ============ */}
@@ -481,79 +460,7 @@ export default function Home() {
 
       </main>
 
-      {/* ============ FOOTER ============ */}
-      <footer>
-        <div className="wrap">
-          <div className="foot-grid">
-            <div className="foot-brand">
-              <a href="#" className="logo">
-                <img
-                  src="/pekopay-logo-mockup.png"
-                  alt="PekoPay"
-                  className="logo-img logo-img-footer"
-                />
-              </a>
-              <p>
-                The smarter way to process payments — built for businesses that
-                want to earn while they grow.
-              </p>
-              <p className="foot-address">
-                1021 West Hastings St, 9th Floor
-                <br />
-                Vancouver, BC V6C 2R6
-              </p>
-            </div>
-            <div className="foot-col">
-              <h5>Solution</h5>
-              <ul>
-                <li>
-                  <a href="#">Invoicing</a>
-                </li>
-                <li>
-                  <a href="#">Payments Coming Soon</a>
-                </li>
-              </ul>
-            </div>
-            <div className="foot-col">
-              <h5>Partnership</h5>
-              <ul>
-                <li>
-                  <a href="#">Referral Program</a>
-                </li>
-              </ul>
-            </div>
-            <div className="foot-col">
-              <h5>Cashback</h5>
-              <ul>
-                <li>
-                  <a href="#">Earning Cashback</a>
-                </li>
-              </ul>
-            </div>
-            <div className="foot-col">
-              <h5>Company</h5>
-              <ul>
-                <li>
-                  <a href="#">About Us</a>
-                </li>
-                <li>
-                  <a href="#">Careers</a>
-                </li>
-                <li>
-                  <a href="#">Compliance &amp; Fraud Prevention</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="foot-bot">
-            <span>© 2026 PekoPay, Inc. All Rights Reserved.</span>
-            <div className="links">
-              <a href="#">Terms &amp; Conditions</a>
-              <a href="#">Privacy Policy</a>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <SiteFooter />
     </>
   );
 }

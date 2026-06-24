@@ -1,51 +1,8 @@
 "use client";
 
 import { useState, useRef, useEffect, useCallback } from "react";
-
-type NavItem = {
-  label: string;
-  href?: string;
-  children?: { label: string; href: string }[];
-};
-
-const NAV: NavItem[] = [
-  {
-    label: "Solutions",
-    children: [
-      { label: "Batch Processing", href: "#" },
-      { label: "Invoice", href: "#solution" },
-      { label: "Payment Links", href: "#" },
-      { label: "Quotes", href: "#" },
-      { label: "Subscription / Recurring", href: "#" },
-    ],
-  },
-  {
-    label: "Features",
-    children: [
-      { label: "Custom Reports", href: "#" },
-      { label: "Fraud Prevention", href: "#" },
-      { label: "Integrations", href: "#" },
-      { label: "Refunds", href: "#" },
-    ],
-  },
-  {
-    label: "Developer",
-    children: [
-      { label: "API Reference", href: "#" },
-      { label: "Documentation", href: "#" },
-    ],
-  },
-  {
-    label: "Resources",
-    children: [
-      { label: "Blog", href: "#" },
-      { label: "Case Studies", href: "#" },
-      { label: "Podcast", href: "#" },
-      { label: "Product Tutorials", href: "#" },
-    ],
-  },
-  { label: "Pricing", href: "#pricing" },
-];
+import Link from "next/link";
+import { NAV } from "./navConfig";
 
 export default function NavMenu() {
   const [open, setOpen] = useState<string | null>(null);
@@ -105,21 +62,25 @@ export default function NavMenu() {
             </button>
             <div className="nav-dd-menu" role="menu">
               {item.children.map((child) => (
-                <a
+                <Link
                   key={child.label}
                   href={child.href}
                   role="menuitem"
                   onClick={close}
                 >
                   {child.label}
-                </a>
+                </Link>
               ))}
             </div>
           </div>
         ) : (
-          <a key={item.label} href={item.href} className="nav-link-direct">
+          <Link
+            key={item.label}
+            href={item.href ?? "#"}
+            className="nav-link-direct"
+          >
             {item.label}
-          </a>
+          </Link>
         )
       )}
     </div>
