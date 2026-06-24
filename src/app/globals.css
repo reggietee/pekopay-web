@@ -2039,6 +2039,79 @@ button:focus-visible {
   }
 }
 
+/* ============ CONTACT ============ */
+.contact-hero {
+  background: var(--ink);
+  color: var(--cream-3);
+  text-align: center;
+  padding: 96px 32px 150px;
+  position: relative;
+  overflow: hidden;
+}
+.contact-hero::before {
+  content: "";
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 420px;
+  height: 320px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(91, 106, 191, 0.3),
+    transparent 70%
+  );
+  pointer-events: none;
+}
+.contact-hero h1 {
+  color: var(--cream-3);
+  position: relative;
+}
+.contact-hero-icon {
+  width: 52px;
+  height: 52px;
+  color: var(--gold-soft);
+  margin: 0 auto 22px;
+  position: relative;
+  display: block;
+}
+.contact-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  padding: 48px;
+  max-width: 840px;
+  margin: -96px auto 0;
+  position: relative;
+  z-index: 2;
+}
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.contact-grid .full {
+  grid-column: 1 / -1;
+}
+.contact-actions {
+  margin-top: 28px;
+  text-align: center;
+}
+textarea.auth-input {
+  resize: vertical;
+  min-height: 150px;
+}
+@media (max-width: 640px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  .contact-card {
+    padding: 32px 24px;
+  }
+}
+
 /* ============ AUTH (LOGIN) ============ */
 .auth {
   min-height: 100vh;
