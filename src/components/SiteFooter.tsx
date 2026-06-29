@@ -33,7 +33,7 @@ export default function SiteFooter() {
                 <Link href="/solution/batch-processing">Batch Processing</Link>
               </li>
               <li>
-                <Link href="/solution/payment">Payments Coming Soon</Link>
+                <Link href="/solution/payment-links">Payment Links</Link>
               </li>
             </ul>
           </div>
