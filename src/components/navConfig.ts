@@ -11,6 +11,7 @@ export const NAV: NavItem[] = [
     label: "Solution",
     children: [
       { label: "Invoicing", href: "/solution/invoicing" },
+      { label: "Batch Processing", href: "/solution/batch-processing" },
       { label: "Payment (Coming Soon)", href: "/solution/payment" },
     ],
   },
