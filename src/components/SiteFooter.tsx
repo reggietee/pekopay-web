@@ -38,6 +38,9 @@ export default function SiteFooter() {
               <li>
                 <Link href="/solution/quotes">Quotes</Link>
               </li>
+              <li>
+                <Link href="/solution/subscriptions">Subscriptions</Link>
+              </li>
             </ul>
           </div>
           <div className="foot-col">

@@ -14,6 +14,7 @@ export const NAV: NavItem[] = [
       { label: "Batch Processing", href: "/solution/batch-processing" },
       { label: "Payment Links", href: "/solution/payment-links" },
       { label: "Quotes", href: "/solution/quotes" },
+      { label: "Subscriptions", href: "/solution/subscriptions" },
     ],
   },
   {
