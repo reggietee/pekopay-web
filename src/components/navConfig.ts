@@ -13,6 +13,7 @@ export const NAV: NavItem[] = [
       { label: "Invoicing", href: "/solution/invoicing" },
       { label: "Batch Processing", href: "/solution/batch-processing" },
       { label: "Payment Links", href: "/solution/payment-links" },
+      { label: "Quotes", href: "/solution/quotes" },
     ],
   },
   {

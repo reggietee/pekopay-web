@@ -35,6 +35,9 @@ export default function SiteFooter() {
               <li>
                 <Link href="/solution/payment-links">Payment Links</Link>
               </li>
+              <li>
+                <Link href="/solution/quotes">Quotes</Link>
+              </li>
             </ul>
           </div>
           <div className="foot-col">
