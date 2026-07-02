@@ -1436,7 +1436,7 @@ footer {
 }
 .foot-grid {
   display: grid;
-  grid-template-columns: 1.6fr repeat(4, 1fr);
+  grid-template-columns: 1.6fr repeat(5, 1fr);
   gap: 40px;
   padding-bottom: 56px;
   border-bottom: 1px solid var(--line);

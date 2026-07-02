@@ -44,6 +44,23 @@ export default function SiteFooter() {
             </ul>
           </div>
           <div className="foot-col">
+            <h5>Features</h5>
+            <ul>
+              <li>
+                <Link href="/feature/card-vault">Card Vault</Link>
+              </li>
+              <li>
+                <Link href="/feature/custom-reports">Custom Reports</Link>
+              </li>
+              <li>
+                <Link href="/feature/customer-manager">Customer Manager</Link>
+              </li>
+              <li>
+                <Link href="/feature/integrations">Integrations</Link>
+              </li>
+            </ul>
+          </div>
+          <div className="foot-col">
             <h5>Partnership</h5>
             <ul>
               <li>

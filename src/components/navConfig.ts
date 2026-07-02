@@ -18,6 +18,15 @@ export const NAV: NavItem[] = [
     ],
   },
   {
+    label: "Features",
+    children: [
+      { label: "Card Vault", href: "/feature/card-vault" },
+      { label: "Custom Reports", href: "/feature/custom-reports" },
+      { label: "Customer Manager", href: "/feature/customer-manager" },
+      { label: "Integrations", href: "/feature/integrations" },
+    ],
+  },
+  {
     label: "Earn Cashback",
     children: [
       {
