@@ -2,11 +2,13 @@
 
 import { useState, useRef, useEffect, useCallback } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { NAV } from "./navConfig";
 
 export default function NavMenu() {
   const [open, setOpen] = useState<string | null>(null);
   const ref = useRef<HTMLDivElement>(null);
+  const pathname = usePathname();
 
   const close = useCallback(() => setOpen(null), []);
 
@@ -77,7 +79,13 @@ export default function NavMenu() {
           <Link
             key={item.label}
             href={item.href ?? "#"}
-            className="nav-link-direct"
+            className={`nav-link-direct${
+              item.href &&
+              (pathname === item.href ||
+                pathname.startsWith(`${item.href}/`))
+                ? " active"
+                : ""
+            }`}
           >
             {item.label}
           </Link>

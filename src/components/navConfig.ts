@@ -43,6 +43,7 @@ export const NAV: NavItem[] = [
     ],
   },
   { label: "Contact Sales", href: "/contact-us" },
+  { label: "Blog", href: "/blog" },
   { label: "Perks", href: "/perks" },
   { label: "Developer", href: "/developer" },
 ];
