@@ -81,10 +81,13 @@ export default function SiteFooter() {
             </ul>
           </div>
           <div className="foot-col">
-            <h5>Blog</h5>
+            <h5>Resources</h5>
             <ul>
               <li>
-                <Link href="/blog">All Posts</Link>
+                <Link href="/blog">Blog</Link>
+              </li>
+              <li>
+                <Link href="/faq">FAQ</Link>
               </li>
             </ul>
           </div>

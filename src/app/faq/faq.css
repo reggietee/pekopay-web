@@ -1,0 +1,122 @@
+/* ============================================================
+   FAQ — scoped styles (accordion + page header descriptor)
+   Reuses global tokens/classes; only adds accordion interaction.
+   Global classes reused (NOT redefined): wrap, block, cta-sec,
+   cta-inner, cta-body, cta-actions, eyebrow, accent-italic,
+   btn/btn-gold/btn-outline/btn-lg.
+   ============================================================ */
+
+.faq-header {
+  padding-bottom: 8px;
+}
+.faq-header h1 {
+  margin-top: 14px;
+}
+.faq-desc {
+  margin-top: 16px;
+  max-width: 560px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+/* Accordion */
+.faq-accordion {
+  max-width: 820px;
+  margin: 48px auto 0;
+}
+.faq-item {
+  border-bottom: 1px solid var(--line);
+}
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+.faq-q {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 22px 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: var(--font-sans);
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--ink);
+  transition: color 0.15s ease;
+}
+.faq-q:hover {
+  color: var(--gold-deep);
+}
+
+.faq-chevron {
+  flex-shrink: 0;
+  color: var(--gold-deep);
+  transition: transform 0.25s ease;
+}
+.faq-item.open .faq-chevron {
+  transform: rotate(180deg);
+}
+
+/* Smooth expand/collapse via grid-rows (no height measuring) */
+.faq-a-wrap {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.25s ease;
+}
+.faq-item.open .faq-a-wrap {
+  grid-template-rows: 1fr;
+}
+.faq-a-inner {
+  overflow: hidden;
+}
+.faq-a {
+  padding: 0 0 24px;
+}
+.faq-a p {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--ink-soft);
+}
+.faq-a p + p {
+  margin-top: 14px;
+}
+
+.faq-list {
+  list-style: none;
+  margin: 14px 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.faq-list li {
+  position: relative;
+  padding-left: 22px;
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
+.faq-list li::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 9px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gold);
+}
+.faq-a p + .faq-list {
+  margin-top: 12px;
+}
+.faq-list + p {
+  margin-top: 14px;
+}

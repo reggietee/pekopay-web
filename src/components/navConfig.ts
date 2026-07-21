@@ -43,7 +43,13 @@ export const NAV: NavItem[] = [
     ],
   },
   { label: "Contact Sales", href: "/contact-us" },
-  { label: "Blog", href: "/blog" },
+  {
+    label: "Resources",
+    children: [
+      { label: "Blog", href: "/blog" },
+      { label: "FAQ", href: "/faq" },
+    ],
+  },
   { label: "Perks", href: "/perks" },
   { label: "Developer", href: "/developer" },
 ];
