@@ -1,5 +1,9 @@
 // PekoPay FAQ content — single source of truth for the /faq page AND its
-// JSON-LD schema. Source copy: pekopay-faq-copy.md (v1.0, 2026-07-21).
+// JSON-LD schema. Source copy: pekopay-faq-copy.md (v1.0, 2026-07-21),
+// then accuracy-checked against the PekoPay/BlueSnap FAQ bible (2026-07-21):
+// corrected deposit timing, PCI SAQ mapping, Discover availability, data
+// export, and reserves; unblocked multi-currency, e-Transfer/EFT, the
+// prohibited-industry list, and a process answer for chargebacks.
 //
 // Held-back questions (answers awaiting a [CONFIRM] value) are commented out
 // at the bottom of this file with their markers intact. Do not publish a
@@ -115,7 +119,7 @@ export const featured: FaqItem[] = [
     answer: [
       {
         type: "p",
-        text: "PekoPay accepts all major credit and debit cards plus digital wallets, including Visa, Mastercard, American Express, Discover, Apple Pay, and Google Pay.",
+        text: "PekoPay accepts all major credit and debit cards plus digital wallets, including Visa, Mastercard, American Express, Apple Pay, and Google Pay.",
       },
       { type: "p", text: "Full list:" },
       {
@@ -124,7 +128,6 @@ export const featured: FaqItem[] = [
           "Visa",
           "Mastercard",
           "American Express",
-          "Discover",
           "Debit cards",
           "Apple Pay",
           "Google Pay",
@@ -144,21 +147,17 @@ export const featured: FaqItem[] = [
     answer: [
       {
         type: "p",
-        text: "Most PekoPay merchants receive deposits within 1 to 3 business days of the transaction settling.",
+        text: "PekoPay's default payout schedule is daily, with each payout settling to your bank account 2 business days after the transaction (Daily +2).",
       },
-      { type: "p", text: "Timing depends on:" },
+      { type: "p", text: "A few things affect the exact timing:" },
       {
         type: "ul",
         items: [
-          "Your banking institution",
-          "Your country",
-          "Your processing history",
-          "Your account standing",
+          "Your agreement — some accounts are set up with custom payout terms",
+          "Business days only — if a payout date lands on a bank holiday, it moves to the next business day",
+          "Your own bank's processing times",
+          "New accounts may see slightly longer timing while processing history is established",
         ],
-      },
-      {
-        type: "p",
-        text: "New accounts sometimes see slightly longer timing during the first few weeks while processing history is established.",
       },
     ],
   },
@@ -253,8 +252,27 @@ export const categories: FaqCategory[] = [
             type: "p",
             text: "Common use cases include professional services, property management, SaaS and subscription businesses, trades and contractors, and retail. Some industries carry higher regulatory or chargeback risk and require additional review, or cannot be supported.",
           },
-          // Dropped the "[CONFIRM: INDUSTRIES] — insert prohibited list" editorial
-          // note; the answer above is complete without it.
+          {
+            type: "p",
+            text: "A few categories can't be supported or need extra review, including:",
+          },
+          {
+            type: "ul",
+            items: [
+              "Illegal or unlawful goods and services",
+              "Get-rich-quick, work-from-home, and investment schemes",
+              "Counterfeit, replica, or stolen goods",
+              "Cryptocurrency, and unlicensed financial, securities, or forex/binary-options businesses",
+              "Debt collection, debt settlement, and credit repair",
+              "Gambling and sports-betting services",
+              "Adult content",
+              "Weapons, firearms, ammunition, and hazardous materials",
+            ],
+          },
+          {
+            type: "p",
+            text: "This isn't the full list — if you're unsure whether your business qualifies, ask the team before you apply.",
+          },
         ],
       },
       {
@@ -348,12 +366,44 @@ export const categories: FaqCategory[] = [
     title: "Payments and Deposits",
     items: [
       {
+        id: "payments-etransfer-eft",
+        question: "Can I accept Interac e-Transfer or EFT payments?",
+        answer: [
+          {
+            type: "p",
+            text: "Yes. Alongside cards, PekoPay supports bank payments — ACH and e-Transfer / EFT — so you can offer customers a lower-cost way to pay on larger invoices.",
+          },
+          {
+            type: "p",
+            text: "Bank account and routing details are validated before a transaction is processed, which stops fake or mistyped account data before it turns into a failed payment.",
+          },
+        ],
+      },
+      {
+        id: "payments-multicurrency",
+        question: "Can I accept payments in US dollars or other currencies?",
+        answer: [
+          {
+            type: "p",
+            text: "Yes. PekoPay accepts payments in more than 100 currencies and can settle to your account in any of 16 currencies, including Canadian and US dollars.",
+          },
+          {
+            type: "p",
+            text: "When you settle in the same currency a customer paid in — a like-for-like currency — there are no FX or conversion fees. For other currencies, PekoPay converts at live Interbank rates with a competitive mark-up that covers the conversion, so the price your shopper sees at checkout is the price they pay.",
+          },
+          {
+            type: "p",
+            text: "If you regularly invoice customers abroad, the team can walk you through the settlement currencies that fit your business.",
+          },
+        ],
+      },
+      {
         id: "payments-reserves",
         question: "Will PekoPay hold a reserve on my funds?",
         answer: [
           {
             type: "p",
-            text: "Most PekoPay merchants have no reserve on their account, and any reserve requirement is disclosed during onboarding before you process a single transaction.",
+            text: "Most PekoPay merchants have no reserve on their account. When one does apply, it is based on your risk profile and can be set at onboarding or later in the relationship — and you are told about it directly.",
           },
           {
             type: "p",
@@ -378,8 +428,8 @@ export const categories: FaqCategory[] = [
           },
         ],
       },
-      // (Q14) Interac Debit, (Q15) e-Transfer/EFT, (Q16) multi-currency —
-      // HELD BACK (see commented block).
+      // (Q14) Interac Debit — HELD BACK (see commented block). Q15 e-Transfer/EFT
+      // and Q16 multi-currency published above after the bible cross-reference.
     ],
   },
   // Cashback category omitted — all three remaining questions (Q20, Q21, Q22)
@@ -398,7 +448,31 @@ export const categories: FaqCategory[] = [
           },
           {
             type: "p",
-            text: "Because card data is tokenized and never touches your servers in raw form, most merchants qualify for SAQ A or SAQ A-EP, which are the shortest of the PCI self-assessments. PekoPay does not charge a PCI compliance fee.",
+            text: "Because card data is tokenized and never touches your servers in raw form, most merchants qualify for the short, simple SAQ A. Depending on how you integrate, you may complete the longer SAQ A-EP, or SAQ C-VT if you use the Virtual Terminal; API integrations are assessed on their specific configuration. The questionnaire is renewed yearly, and PekoPay does not charge a PCI compliance fee.",
+          },
+        ],
+      },
+      {
+        id: "security-chargebacks",
+        question: "What happens if I get a chargeback?",
+        answer: [
+          {
+            type: "p",
+            text: "You are notified in your PekoPay dashboard as soon as a chargeback is filed, and you can submit evidence to dispute it.",
+          },
+          { type: "p", text: "How it works:" },
+          {
+            type: "ol",
+            items: [
+              "The customer's bank files the dispute and the transaction amount is temporarily held.",
+              "PekoPay notifies you with the reason code so you know why it was raised.",
+              "You upload supporting documents — receipts, delivery confirmation, correspondence — through the dashboard.",
+              "The issuing bank reviews the evidence and decides, usually within 30 to 90 days.",
+            ],
+          },
+          {
+            type: "p",
+            text: "PekoPay also offers prevention tools that stop many disputes before they become chargebacks — real-time alerts (Ethoca and Verifi) that let a sale be refunded before it escalates, plus managed dispute responses. Clear records and these tools are the most reliable way to keep chargebacks low.",
           },
         ],
       },
@@ -408,7 +482,7 @@ export const categories: FaqCategory[] = [
         answer: [
           {
             type: "p",
-            text: "Your customer and transaction data belongs to you, and you can export it at any time from your dashboard.",
+            text: "Your customer and transaction data belongs to you, and you can retrieve all of it — everything not covered by PCI rules — at any time through our Reporting API.",
           },
           {
             type: "p",
@@ -416,7 +490,8 @@ export const categories: FaqCategory[] = [
           },
         ],
       },
-      // (Q25) What happens if I get a chargeback? — HELD BACK (see commented block).
+      // Q25 chargebacks published above (process answer) after the bible
+      // cross-reference; exact evidence window + fee amount still to confirm.
     ],
   },
   {
@@ -498,6 +573,16 @@ export function answerToPlainText(answer: AnswerBlock[]): string {
 }
 
 /* ============================================================================
+   PUBLISHED, BUT WITH OPEN FLAGS TO CONFIRM WITH PEKOPAY:
+   - Q15 payments-etransfer-eft: bible confirms ACH/E-Transfer support; confirm
+     whether this is Canadian Interac e-Transfer branding specifically.
+   - Q25 security-chargebacks: process published; exact evidence window (days)
+     and chargeback fee amount still need confirmation before adding them.
+   - Q12 payments-methods: Discover removed (bible: US/UK/EUR merchants only);
+     re-add if PekoPay has enabled Discover for Canadian merchants.
+   See the PR summary for the full flag list (cashback figures, Canadian-based
+   support, in-person/POS, PCI Level 1, no-PCI-fee, refund timing).
+   ----------------------------------------------------------------------------
    HELD BACK — awaiting [CONFIRM] values. Not rendered, not in schema. Restore
    each into its section once the client supplies the bracketed value.
    ----------------------------------------------------------------------------
@@ -516,15 +601,6 @@ export function answerToPlainText(answer: AnswerBlock[]): string {
      [CONFIRM: RAILS] — drafts for yes / roadmap in source.
      NEEDS: whether Interac Debit is live, beta, or roadmap.
 
-   Q15 · payments-etransfer-eft · "Can I accept Interac e-Transfer or EFT payments?"
-     [CONFIRM: RAILS] — drafts for yes / no in source.
-     NEEDS: whether e-Transfer / EFT / PAD are live, beta, or roadmap.
-
-   Q16 · payments-multicurrency · "Can I accept payments in US dollars or other currencies?"
-     "[CONFIRM] PekoPay accepts cards issued outside Canada, with funds settling
-      to your Canadian account in Canadian dollars." (lead sentence flagged)
-     NEEDS: confirmation of the multi-currency / foreign-card claim.
-
    Q20 · cashback-how-much · "How much cashback will I earn?"
      "[CONFIRM: CASHBACK] Merchants earn [X%] of annual processed volume back."
      NEEDS: cashback rate / band + worked example.
@@ -536,11 +612,6 @@ export function answerToPlainText(answer: AnswerBlock[]): string {
    Q22 · cashback-minimum · "Is there a minimum to qualify for cashback?"
      "[CONFIRM: CASHBACK] [No minimum ...] or [Merchants qualify after $X]."
      NEEDS: minimum volume threshold (or confirmation there is none).
-
-   Q25 · security-chargebacks · "What happens if I get a chargeback?"
-     "... you have [CONFIRM: X days] to submit evidence ..." + ol steps +
-     "A chargeback fee of [CONFIRM] applies per dispute."
-     NEEDS: evidence window (days) + chargeback fee amount. Uses an "ol" block.
 
    Q28 · switching-how-to-switch · "How do I switch to PekoPay from another processor?"
      "Switching takes about [CONFIRM: a week] ..." + ol steps.
