@@ -42,7 +42,7 @@ export const NAV: NavItem[] = [
       { label: "Referral Program", href: "/partnerships/referral-program" },
     ],
   },
-  { label: "Contact Sales", href: "/contact-us" },
+  { label: "Contact Us", href: "/contact-us" },
   {
     label: "Resources",
     children: [

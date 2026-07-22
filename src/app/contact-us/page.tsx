@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
-import ContactForm from "@/components/ContactForm";
+import ContactHub from "@/components/ContactHub";
 import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
 
 export const metadata: Metadata = {
-  title: "Contact Sales — PekoPay",
-  description: "Talk to the PekoPay team about payments, pricing, and cashback.",
+  title: "Contact Us — PekoPay",
+  description:
+    "Get in touch with PekoPay — sales, technical support, or general inquiries. We'll get you to the right place.",
 };
 
 export default function ContactPage() {
@@ -13,28 +14,22 @@ export default function ContactPage() {
     <>
       <SiteHeader />
       <main id="main-content">
-        <section className="contact-hero">
-          <svg
-            className="contact-hero-icon"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="1.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            aria-hidden="true"
-          >
-            <rect x="2.5" y="4.5" width="19" height="15" rx="2.5" />
-            <path d="M3 6l9 6.5L21 6" />
-          </svg>
-          <h1>Talk to Us</h1>
-        </section>
-
-        <div className="wrap" style={{ paddingBottom: 120 }}>
-          <div className="contact-card">
-            <ContactForm />
+        <section className="block">
+          <div className="wrap">
+            <div className="contact-head">
+              <span className="eyebrow">Contact Us</span>
+              <h1>
+                How can we <span className="accent-italic">help?</span>
+              </h1>
+              <p className="contact-head-desc">
+                Whether you&rsquo;re exploring PekoPay, need technical help, or
+                just have a question — pick the option that fits and we&rsquo;ll
+                get you to the right place.
+              </p>
+            </div>
+            <ContactHub />
           </div>
-        </div>
+        </section>
       </main>
       <SiteFooter />
     </>
