@@ -77,8 +77,20 @@ const TYPES: {
   },
 ];
 
+const PROCESSORS = [
+  { value: "none", label: "Not currently using one" },
+  { value: "stripe", label: "Stripe" },
+  { value: "square", label: "Square" },
+  { value: "paypal", label: "PayPal" },
+  { value: "moneris", label: "Moneris" },
+  { value: "helcim", label: "Helcim" },
+  { value: "other", label: "Other (please specify)" },
+];
+
 export default function ContactHub() {
   const [selected, setSelected] = useState<Inquiry>("sales");
+  const [processor, setProcessor] = useState("");
+  const [processorOther, setProcessorOther] = useState("");
   const active = TYPES.find((t) => t.id === selected) ?? TYPES[0];
 
   return (
@@ -175,6 +187,40 @@ export default function ContactHub() {
                 ))}
               </select>
             </div>
+            <div className="auth-field full">
+              <label className="auth-label" htmlFor="processor">
+                Are you currently using a payment processor? (optional)
+              </label>
+              <select
+                id="processor"
+                name="processor"
+                className="auth-input"
+                value={processor}
+                onChange={(e) => setProcessor(e.target.value)}
+              >
+                <option value="">Select an option</option>
+                {PROCESSORS.map((p) => (
+                  <option key={p.value} value={p.value}>
+                    {p.label}
+                  </option>
+                ))}
+              </select>
+            </div>
+            {processor === "other" && (
+              <div className="auth-field full">
+                <label className="auth-label" htmlFor="processor-other">
+                  Please specify
+                </label>
+                <input
+                  id="processor-other"
+                  name="processorOther"
+                  className="auth-input"
+                  placeholder="Which payment processor?"
+                  value={processorOther}
+                  onChange={(e) => setProcessorOther(e.target.value)}
+                />
+              </div>
+            )}
             <div className="auth-field full">
               <label className="auth-label" htmlFor="message">
                 Message *
