@@ -122,15 +122,26 @@ p {
   background: var(--gold-deep);
   display: inline-block;
 }
-/* Homepage section kicker — quiet sans label (no number, dash, or mono). */
+/* Homepage section kicker — label with a short brand-purple side bar
+   (no number, dash prefix, or monospace). */
 .kicker {
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 11px;
   font-family: var(--font-sans), system-ui, sans-serif;
-  font-size: 13px;
-  font-weight: 500;
+  font-size: 14px;
+  font-weight: 600;
   letter-spacing: 0.01em;
-  color: var(--muted);
-  margin-bottom: 4px;
+  color: var(--ink);
+  margin-bottom: 10px;
+}
+.kicker::before {
+  content: "";
+  width: 3px;
+  height: 15px;
+  border-radius: 2px;
+  background: var(--gold);
+  flex-shrink: 0;
 }
 
 /* ============ NAV ============ */
