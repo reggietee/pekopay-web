@@ -38,40 +38,38 @@ export default function Spotlight() {
 
   return (
     <>
-      <section className="block spotlight-sec">
-        <div className="spotlight">
-          <div className="spotlight-img">
-            <span className="spotlight-img-tag">Case study</span>
-            <img
-              src="/pemberton-hero.jpg"
-              alt="Pemberton Holmes Real Estate"
-              className="spotlight-photo"
-            />
-            <span className="spotlight-img-caption">
-              — Vancouver Island, British Columbia
-            </span>
-          </div>
-          <div className="spotlight-body">
-            <span className="eyebrow">Company spotlight</span>
-            <h2>Pemberton Holmes</h2>
-            <p className="sub">A business thriving with PekoPay.</p>
-            <p className="body">
-              One of British Columbia&apos;s oldest and most trusted real
-              estate firms, established in 1887, Pemberton Holmes relies on
-              PekoPay to manage payments simply and efficiently across its
-              operations.
-            </p>
-            <button
-              className="spotlight-link"
-              onClick={() => setOpen(true)}
-              aria-haspopup="dialog"
-            >
-              Learn more
-              <ArrowSvg />
-            </button>
-          </div>
+      <div className="spotlight">
+        <div className="spotlight-img">
+          <span className="spotlight-img-tag">Case study</span>
+          <img
+            src="/pemberton-hero.jpg"
+            alt="Pemberton Holmes Real Estate"
+            className="spotlight-photo"
+          />
+          <span className="spotlight-img-caption">
+            — Vancouver Island, British Columbia
+          </span>
         </div>
-      </section>
+        <div className="spotlight-body">
+          <span className="eyebrow">Company spotlight</span>
+          <h2>Pemberton Holmes</h2>
+          <p className="sub">A business thriving with PekoPay.</p>
+          <p className="body">
+            One of British Columbia&apos;s oldest and most trusted real estate
+            firms, established in 1887, Pemberton Holmes relies on PekoPay to
+            manage payments simply and efficiently across its operations.
+          </p>
+          {/* Swap to <Link href="/blog/case-studies/pemberton-holmes"> once Strapi case studies category is live. */}
+          <button
+            className="spotlight-link"
+            onClick={() => setOpen(true)}
+            aria-haspopup="dialog"
+          >
+            Learn more
+            <ArrowSvg />
+          </button>
+        </div>
+      </div>
 
       {open && (
         <div

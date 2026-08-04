@@ -24,19 +24,20 @@ export default function Home() {
       <SiteHeader />
 
       <main id="main-content">
-      {/* ============ HERO ============ */}
+      {/* ============ 1. HERO ============ */}
       <section className="hero">
         <div className="wrap hero-grid">
           <div className="hero-copy">
             <h1>
-              The <span className="italic">smarter</span> way to process
-              payments.
+              Payments that <span className="italic">pay you back.</span>
             </h1>
-            <p className="hero-sub">Earn cashback on every transaction.</p>
+            <p className="hero-sub">
+              No contracts. No monthly fees. Cashback on every transaction.
+            </p>
             <p className="hero-body">
-              PekoPay helps businesses accept payments while earning cashback on
-              every transaction. Save money, improve cash flow, and grow your
-              business, all from one platform.
+              PekoPay is a Canadian payment processor built for businesses that
+              want to keep more of what they earn. Accept payments, get paid on
+              your schedule, and earn cashback on every transaction you run.
             </p>
             <div className="hero-ctas">
               <Link className="btn btn-gold btn-lg" href="/login">
@@ -65,7 +66,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ============ TRUSTED BY ============ */}
+      {/* ============ 2. TRUSTED BY ============ */}
       <section className="trusted">
         <div className="wrap trusted-row">
           <div className="trusted-label">
@@ -86,28 +87,26 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ============ INVOICING ============ */}
-      <section className="block" id="solution">
+      {/* ============ 3. PLATFORM GRID ============ */}
+      <section className="block platform-sec" id="platform">
         <div className="wrap">
           <div className="sec-head">
             <div>
-              <span className="eyebrow">01 · Invoicing</span>
+              <span className="eyebrow">01 · Platform</span>
               <h2 className="sec-h2">
-                Invoice &amp; get paid{" "}
-                <span className="accent-italic">with cashback.</span>
+                Every way to get paid,{" "}
+                <span className="accent-italic">in one place.</span>
               </h2>
-              <p className="sub">
-                Simplify payments &amp; boost your earnings.
-              </p>
+              <p className="sub">Nine tools, one account, one set of books.</p>
             </div>
             <p className="body">
-              Send invoices, accept payments, and earn cashback, all in one
-              platform. With PekoPay&apos;s invoicing feature, businesses can
-              streamline collections and watch rewards stack up automatically.
+              Whether you bill monthly, quote first, charge in batches, or just
+              need a link you can text someone, it runs through the same
+              platform and earns cashback the same way.
             </p>
           </div>
 
-          <div className="invoicing-grid">
+          <div className="platform-layout">
             <div className="invoice-mock" aria-hidden="true">
               <div className="invoice-head">
                 <span className="id">INV-2026-0421</span>
@@ -147,25 +146,276 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="invoice-copy">
-              <span className="eyebrow">Payment options</span>
-              <h3 className="invoice-copy-heading">
-                Every way to get paid, in one place.
-              </h3>
-              <ul className="checklist">
-                <li>Batch Processing</li>
-                <li>Invoice</li>
-                <li>Payment Links</li>
-                <li>Subscriptions</li>
-              </ul>
+            <div className="platform-cards">
+              <div className="platform-group">
+                <span className="platform-group-label">Solutions</span>
+                <div className="platform-grid">
+                  <Link className="platform-card" href="/solution/invoicing">
+                    <h3>Invoicing</h3>
+                    <p>Send professional invoices and get paid faster.</p>
+                  </Link>
+                  <Link
+                    className="platform-card"
+                    href="/solution/payment-links"
+                  >
+                    <h3>Payment Links</h3>
+                    <p>Share a link, take a payment. No website needed.</p>
+                  </Link>
+                  <Link
+                    className="platform-card"
+                    href="/solution/subscriptions"
+                  >
+                    <h3>Subscriptions</h3>
+                    <p>Recurring billing that runs on its own.</p>
+                  </Link>
+                  <Link
+                    className="platform-card"
+                    href="/solution/batch-processing"
+                  >
+                    <h3>Batch Processing</h3>
+                    <p>Charge hundreds of customers in a single run.</p>
+                  </Link>
+                  <Link className="platform-card" href="/solution/quotes">
+                    <h3>Quotes</h3>
+                    <p>Send a quote, turn it into a payment once approved.</p>
+                  </Link>
+                </div>
+              </div>
+
+              <div className="platform-group">
+                <span className="platform-group-label">Features</span>
+                <div className="platform-grid">
+                  <Link className="platform-card" href="/feature/card-vault">
+                    <h3>Card Vault</h3>
+                    <p>Store cards securely and charge them again anytime.</p>
+                  </Link>
+                  <Link
+                    className="platform-card"
+                    href="/feature/customer-manager"
+                  >
+                    <h3>Customer Manager</h3>
+                    <p>Every customer, payment, and card on one record.</p>
+                  </Link>
+                  <Link
+                    className="platform-card"
+                    href="/feature/custom-reports"
+                  >
+                    <h3>Custom Reports</h3>
+                    <p>Build the reports your business actually runs on.</p>
+                  </Link>
+                  <Link className="platform-card" href="/feature/integrations">
+                    <h3>Integrations</h3>
+                    <p>Connect the tools you already use.</p>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p className="platform-note">
+            Accepting payments from outside Canada? PekoPay supports over 100
+            currencies.
+          </p>
+        </div>
+      </section>
+
+      {/* ============ 4. TERMS AND PAYOUTS ============ */}
+      <section className="block terms-sec">
+        <div className="wrap">
+          <div className="sec-head">
+            <div>
+              <span className="eyebrow">02 · Terms</span>
+              <h2 className="sec-h2">
+                Keep your money moving{" "}
+                <span className="accent-italic">on your terms.</span>
+              </h2>
+              <p className="sub">
+                No lock-in, no surprises, no waiting on someone else&apos;s
+                schedule.
+              </p>
+            </div>
+            <p className="body">
+              Most processors make leaving expensive and getting paid slow. We
+              do neither. You decide how often the money lands, and you can walk
+              away whenever you want.
+            </p>
+          </div>
+
+          <div className="terms-grid">
+            <div className="security-card">
+              <span className="num">— 01</span>
+              <h3>No long-term contracts</h3>
+              <p>
+                Leave whenever you want. Nothing to cancel, no exit fee, no
+                notice period.
+              </p>
+            </div>
+            <div className="security-card">
+              <span className="num">— 02</span>
+              <h3>No monthly fees</h3>
+              <p>
+                You pay when you process. When you don&apos;t process, you
+                don&apos;t pay.
+              </p>
+            </div>
+            <div className="security-card">
+              <span className="num">— 03</span>
+              <h3>Payouts on your schedule</h3>
+              <p>
+                Choose next day, weekly, or monthly. Change it whenever you
+                like.
+              </p>
+            </div>
+            <div className="security-card">
+              <span className="num">— 04</span>
+              <h3>Control your deposit costs</h3>
+              <p>
+                Your bank charges a fee per deposit. Set the frequency that
+                suits your cash flow and your costs.
+              </p>
+            </div>
+          </div>
+
+          <div className="sec-cta">
+            <Link className="btn btn-outline" href="/pricing">
+              See pricing
+              <ArrowSvg />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ============ 5. CASHBACK CALC ============ */}
+      <section className="block cashback-sec" id="cashback">
+        <div className="wrap">
+          <div className="sec-head">
+            <div>
+              <span className="eyebrow">03 · Cashback</span>
+              <h2 className="sec-h2">
+                Earn cashback on{" "}
+                <span className="accent-italic">every payment.</span>
+              </h2>
+              <p className="sub">From your very first transaction.</p>
+            </div>
+            <p className="body">
+              There&apos;s no volume you have to hit and no tier you have to
+              reach. Every transaction you process earns cashback, whether you
+              run four hundred dollars a month or four hundred thousand.
+            </p>
+          </div>
+
+          <ul className="checklist checklist-row">
+            <li>Earn from your first transaction</li>
+            <li>No minimum volume to qualify</li>
+            <li>No holdbacks and no expiry</li>
+          </ul>
+
+          <CashbackCalculator />
+        </div>
+      </section>
+
+      {/* ============ 6. WHY WE CAN DO THIS ============ */}
+      <section className="block why-sec">
+        <div className="wrap">
+          <div className="why-inner">
+            <span className="eyebrow">04 · Why cashback</span>
+            <h2 className="sec-h2">
+              How we can{" "}
+              <span className="accent-italic">afford to do this.</span>
+            </h2>
+            <p>
+              It&apos;s the question we get more than any other. Every payment
+              processor earns a margin on the transactions it handles. Most of
+              them keep all of it. We take a large portion of ours and give it
+              back to the business that earned it in the first place.
+            </p>
+            <p>
+              That&apos;s the whole mechanism. There&apos;s no partner bank
+              funding it, no promotional period, and no clawback later.
+            </p>
+            <Link
+              className="text-link"
+              href="/earn-cashback/how-cashback-works"
+            >
+              How cashback works
+              <ArrowSvg />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ============ 7. SUPPORT AND ONBOARDING ============ */}
+      <section className="block support-sec">
+        <div className="wrap">
+          <div className="sec-head">
+            <div>
+              <span className="eyebrow">05 · Support</span>
+              <h2 className="sec-h2">
+                A real person,{" "}
+                <span className="accent-italic">
+                  usually within 30 minutes.
+                </span>
+              </h2>
+              <p className="sub">The part everyone finds out about too late.</p>
+            </div>
+            <p className="body">
+              Most businesses don&apos;t think about support until the day a
+              payment fails and nobody picks up. We&apos;d rather you find out
+              now.
+            </p>
+          </div>
+
+          <div className="support-grid">
+            <div className="security-card">
+              <span className="num">— 01</span>
+              <h3>Under 30 minutes</h3>
+              <p>Typical response time during business hours.</p>
+            </div>
+            <div className="security-card">
+              <span className="num">— 02</span>
+              <h3>Same-day meetings</h3>
+              <p>Need to talk it through? Book a call and get it the same day.</p>
+            </div>
+            <div className="security-card">
+              <span className="num">— 03</span>
+              <h3>We move your cards for you</h3>
+              <p>
+                Coming from another processor? We migrate your stored cards and
+                recurring billing so nothing breaks and nobody re-enters
+                anything.
+              </p>
+            </div>
+            <div className="security-card">
+              <span className="num">— 04</span>
+              <h3>Help to your first $10K</h3>
+              <p>
+                A real person walks you through setup and stays with you through
+                your first transactions.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ============ QUICKBOOKS INTEGRATION ============ */}
-      <section className="qb-sec">
+      {/* ============ 8. INTEGRATIONS ============ */}
+      <section className="block integrations-sec">
         <div className="wrap">
+          <div className="sec-head">
+            <div>
+              <span className="eyebrow">06 · Integrations</span>
+              <h2 className="sec-h2">
+                Works with the tools{" "}
+                <span className="accent-italic">you already run on.</span>
+              </h2>
+            </div>
+            <p className="body">
+              PekoPay connects to the software your business already uses, so
+              payments and cashback land where your books and your records
+              already live. If you&apos;d rather build it yourself, the API is
+              open.
+            </p>
+          </div>
+
           <div className="qb-callout">
             <img
               src="/logo-quickbooks.png"
@@ -181,218 +431,34 @@ export default function Home() {
               </p>
             </div>
           </div>
-        </div>
-      </section>
 
-      {/* ============ CASHBACK CALC ============ */}
-      <section className="block cashback-sec" id="cashback">
-        <div className="wrap">
-          <div className="sec-head">
-            <div>
-              <span className="eyebrow">02 · Cashback</span>
-              <h2 className="sec-h2">
-                Earn cashback on{" "}
-                <span className="accent-italic">every payment.</span>
-              </h2>
-              <p className="sub">Turn payment processing into profit.</p>
-            </div>
-            <p className="body">
-              Unlike traditional payment processors, PekoPay rewards you for
-              every transaction. The more you process, the more you earn.
-            </p>
-          </div>
-
-          <ul className="checklist checklist-row">
-            <li>Earn cashback on every sale</li>
-            <li>Reduce your payment processing costs</li>
-            <li>Keep more of your hard-earned money</li>
-          </ul>
-
-          <CashbackCalculator />
-        </div>
-      </section>
-
-      {/* ============ CURRENCIES ============ */}
-      <section className="block">
-        <div className="wrap">
-          <div className="sec-head-solo">
-            <h2>
-              Accept payments in{" "}
-              <span className="accent-italic">100+ currencies.</span>
-            </h2>
-          </div>
-
-          <p className="sec-body-intro">
-            Expand your business beyond borders. PekoPay lets you accept
-            payments in over 100 currencies, built for businesses that
-            don&apos;t stop at the city limit.
+          <p className="integrations-row">
+            Also connects with Lone Wolf, plus more integrations added
+            regularly.
           </p>
 
-          <div className="currencies-grid">
-            <div className="currency-cards">
-              <div className="item">
-                <span className="num">01</span>
-                <div>
-                  <h3>Sell internationally with no hassle</h3>
-                  <p>
-                    Accept payments from customers around the world without
-                    needing multiple payment processors.
-                  </p>
-                </div>
-                <span className="ch">USD · EUR · JPY</span>
-              </div>
-              <div className="item">
-                <span className="num">02</span>
-                <div>
-                  <h3>Offer customers their preferred payment currency</h3>
-                  <p>
-                    Enhance customer experience by letting them pay in their
-                    local currency, increasing trust and sales.
-                  </p>
-                </div>
-                <span className="ch">+97 more</span>
-              </div>
-              <div className="item">
-                <span className="num">03</span>
-                <div>
-                  <h3>Reduce currency conversion fees</h3>
-                  <p>
-                    Minimize additional costs with automatic currency conversions
-                    at competitive rates.
-                  </p>
-                </div>
-                <span className="ch">Live FX</span>
-              </div>
-              <div className="item">
-                <span className="num">04</span>
-                <div>
-                  <h3>Simplify global transactions</h3>
-                  <p>
-                    Receive payouts in your preferred currency without the need
-                    to open foreign bank accounts.
-                  </p>
-                </div>
-                <span className="ch">1-day payout</span>
-              </div>
-            </div>
-
-            <div className="hero-img-wrap">
-              <img
-                src="/traveller.jpg"
-                alt="Traveller making a payment abroad"
-                className="hero-img"
-              />
-              <div className="hero-img-badge">
-                <span className="num">100+</span>
-                <span className="txt">Currencies worldwide</span>
-              </div>
-            </div>
+          <div className="sec-cta">
+            <Link className="btn btn-outline" href="/feature/integrations">
+              See all integrations
+              <ArrowSvg />
+            </Link>
+            <Link className="btn btn-outline" href="/developer">
+              Read the API docs
+              <ArrowSvg />
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* ============ SECURITY ============ */}
-      <section className="block">
+      {/* ============ 9. PROOF ============ */}
+      <section className="block proof-sec">
         <div className="wrap">
-          <div className="sec-head-center">
-            <h2>
-              Security &amp; compliance{" "}
-              <span className="accent-italic">you can trust.</span>
-            </h2>
-          </div>
-
-          <div className="security-grid">
-            <div className="security-card">
-              <span className="num">— 01</span>
-              <h3>PCI-DSS Compliance</h3>
-              <p>
-                Keeping your customers&apos; payment data secure with the
-                highest industry standard for cardholder information.
-              </p>
-              <div className="stamp">PCI</div>
-            </div>
-            <div className="security-card">
-              <span className="num">— 02</span>
-              <h3>GDPR &amp; PSD2 Compliance</h3>
-              <p>
-                Meeting European security standards for data protection and
-                strong customer authentication on every transaction.
-              </p>
-              <div className="stamp">EU</div>
-            </div>
-            <div className="security-card">
-              <span className="num">— 03</span>
-              <h3>3D Secure Authentication</h3>
-              <p>
-                Reducing fraud and chargebacks with an additional verification
-                step that puts your business on safer ground.
-              </p>
-              <div className="stamp">3DS</div>
-            </div>
-          </div>
+          <span className="eyebrow proof-eyebrow">07 · Customers</span>
         </div>
-      </section>
 
-      {/* ============ SPOTLIGHT ============ */}
-      <Spotlight />
+        <Spotlight />
 
-      {/* ============ PARTNER PROGRAM ============ */}
-      <section className="block partner-sec" id="partner">
         <div className="wrap">
-          <div className="partner-grid">
-            <div>
-              <span className="eyebrow">03 · Partner Program</span>
-              <h2 className="sec-h2">
-                Join the PekoPay{" "}
-                <span className="italic">Partner Program.</span>
-              </h2>
-              <p className="partner-sub">
-                Earn recurring commissions as a partner.
-              </p>
-              <p className="partner-body">
-                Are you a financial industry professional? Refer businesses to
-                PekoPay and earn recurring commissions while helping your clients
-                save on payment processing.
-              </p>
-              <div className="partner-cta">
-                <Link
-                  className="btn btn-gold-on-dark btn-lg"
-                  href="/partnerships/referral-program"
-                >
-                  Apply as a partner
-                  <ArrowSvg />
-                </Link>
-              </div>
-            </div>
-
-            <div className="partner-benefits">
-              <div className="benefit-row">
-                <span className="benefit-num">— 01</span>
-                <p>Competitive commission structure</p>
-              </div>
-              <div className="benefit-row">
-                <span className="benefit-num">— 02</span>
-                <p>No upfront costs, just refer and earn</p>
-              </div>
-              <div className="benefit-row">
-                <span className="benefit-num">— 03</span>
-                <p>Help businesses maximize their savings</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ============ TESTIMONIALS ============ */}
-      <section className="block testimonials-sec">
-        <div className="wrap">
-          <div className="sec-head-center">
-            <h2>
-              What our customers{" "}
-              <span className="accent-italic">are saying.</span>
-            </h2>
-          </div>
-
           <div className="testimonials-grid">
             <figure className="testimonial">
               <blockquote>
@@ -434,10 +500,122 @@ export default function Home() {
               </figcaption>
             </figure>
           </div>
+
+          <div className="industries-row">
+            <h3>Built for businesses that bill regularly.</h3>
+            <div className="industries-list">
+              <span className="ind">Real estate brokerages</span>
+              <span className="ind">Strata and property management</span>
+              <span className="ind">Professional services</span>
+              <span className="ind">Home services</span>
+              <span className="ind">Membership organizations</span>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* ============ CLOSING CTA ============ */}
+      {/* ============ 10. SECURITY AND CANADIAN TRUST ============ */}
+      <section className="block">
+        <div className="wrap">
+          <div className="sec-head-center">
+            <h2>
+              Built in Canada.{" "}
+              <span className="accent-italic">
+                Secured to the highest standard.
+              </span>
+            </h2>
+          </div>
+
+          <div className="security-grid security-grid-4">
+            <div className="security-card">
+              <span className="num">— 01</span>
+              <h3>PCI DSS Level 1</h3>
+              <p>
+                The highest tier of the payment card industry&apos;s security
+                standard, validated annually by an independent assessor. Held
+                in-house, so you don&apos;t need your own compliant storage.
+              </p>
+              <div className="stamp">PCI</div>
+            </div>
+            <div className="security-card">
+              <span className="num">— 02</span>
+              <h3>99.99% uptime</h3>
+              <p>The platform your revenue runs through stays up.</p>
+              <div className="stamp stamp-sm">99.99</div>
+            </div>
+            <div className="security-card">
+              <span className="num">— 03</span>
+              <h3>3D Secure authentication</h3>
+              <p>
+                An extra verification step on every transaction that cuts fraud
+                and chargebacks.
+              </p>
+              <div className="stamp">3DS</div>
+            </div>
+            <div className="security-card">
+              <span className="num">— 04</span>
+              <h3>Canadian by design</h3>
+              <p>
+                Built and run from Vancouver, for Canadian businesses, with a
+                team in your time zone.
+              </p>
+              <div className="stamp">CA</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ============ 11. FAQ TEASER ============ */}
+      <section className="block faq-teaser-sec">
+        <div className="wrap">
+          <div className="sec-head-center">
+            <h2>
+              Questions we <span className="accent-italic">get a lot.</span>
+            </h2>
+          </div>
+
+          <div className="faq-teaser-grid">
+            <div className="faq-teaser-item">
+              <h3>Is there a contract or a monthly fee?</h3>
+              <p>
+                Neither. No long-term commitment, no monthly fee, and nothing to
+                cancel if you decide to leave.
+              </p>
+            </div>
+            <div className="faq-teaser-item">
+              <h3>How much cashback do I earn?</h3>
+              <p>
+                Cashback is earned on every transaction with no minimum volume
+                to qualify. Use the calculator above for an estimate based on
+                what you process.
+              </p>
+            </div>
+            <div className="faq-teaser-item">
+              <h3>How soon do I get paid?</h3>
+              <p>
+                You choose next day, weekly, or monthly. Settlement time after
+                that depends on your bank.
+              </p>
+            </div>
+            <div className="faq-teaser-item">
+              <h3>Do I need to be PCI compliant myself?</h3>
+              <p>
+                No. PekoPay holds PCI DSS Level 1 certification in-house, so you
+                don&apos;t need your own compliant card storage.
+              </p>
+            </div>
+          </div>
+
+          <div className="sec-cta sec-cta-center">
+            <Link className="btn btn-outline" href="/faq">
+              Read all FAQs
+              <ArrowSvg />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ============ 12. FINAL CTA ============ */}
       <section className="block cta-sec">
         <div className="wrap">
           <div className="cta-inner">
@@ -446,8 +624,8 @@ export default function Home() {
               <span className="accent-italic">every payment?</span>
             </h2>
             <p className="cta-body">
-              Join businesses across Canada that are saving money on every
-              transaction with PekoPay. Get started in minutes.
+              Join businesses across Canada keeping more of what they process.
+              Setup takes minutes and there&apos;s nothing to sign.
             </p>
             <div className="cta-actions">
               <Link className="btn btn-gold btn-lg" href="/login">
@@ -459,6 +637,20 @@ export default function Home() {
               </Link>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* ============ PARTNER BAND ============ */}
+      <section className="partner-band">
+        <div className="wrap partner-band-inner">
+          <p>
+            <strong>Financial professional?</strong> Refer businesses to
+            PekoPay and earn recurring commissions.
+          </p>
+          <Link className="text-link" href="/partnerships/referral-program">
+            Join the referral program
+            <ArrowSvg />
+          </Link>
         </div>
       </section>
 
