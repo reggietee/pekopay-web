@@ -122,6 +122,16 @@ p {
   background: var(--gold-deep);
   display: inline-block;
 }
+/* Homepage section kicker — quiet sans label (no number, dash, or mono). */
+.kicker {
+  display: block;
+  font-family: var(--font-sans), system-ui, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
 
 /* ============ NAV ============ */
 .nav {

@@ -93,7 +93,7 @@ export default function Home() {
         <div className="wrap">
           <div className="sec-head">
             <div>
-              <span className="eyebrow">01 · Platform</span>
+              <span className="kicker">Platform</span>
               <h2 className="sec-h2">
                 Every way to get{" "}
                 <span className="accent-word">paid</span>, in one place.
@@ -225,7 +225,7 @@ export default function Home() {
         <div className="wrap">
           <div className="sec-head">
             <div>
-              <span className="eyebrow">02 · Terms</span>
+              <span className="kicker">Terms &amp; payouts</span>
               <h2 className="sec-h2">
                 Keep your money moving on your{" "}
                 <span className="accent-word">terms.</span>
@@ -291,7 +291,7 @@ export default function Home() {
         <div className="wrap">
           <div className="sec-head">
             <div>
-              <span className="eyebrow">03 · Cashback</span>
+              <span className="kicker">Cashback</span>
               <h2 className="sec-h2">
                 Earn <span className="accent-word">cashback</span> on every
                 payment.
@@ -319,7 +319,7 @@ export default function Home() {
       <section className="block why-sec">
         <div className="wrap">
           <div className="why-inner">
-            <span className="eyebrow">04 · Why cashback</span>
+            <span className="kicker">Why cashback</span>
             <h2 className="sec-h2">
               How we can <span className="accent-word">afford</span> to do
               this.
@@ -350,7 +350,7 @@ export default function Home() {
         <div className="wrap">
           <div className="sec-head">
             <div>
-              <span className="eyebrow">05 · Support</span>
+              <span className="kicker">Support</span>
               <h2 className="sec-h2">
                 A real person, usually within 30{" "}
                 <span className="accent-word">minutes.</span>
@@ -401,7 +401,7 @@ export default function Home() {
         <div className="wrap">
           <div className="sec-head">
             <div>
-              <span className="eyebrow">06 · Integrations</span>
+              <span className="kicker">Integrations</span>
               <h2 className="sec-h2">
                 Works with the <span className="accent-word">tools</span> you
                 already run on.
@@ -452,7 +452,7 @@ export default function Home() {
       {/* ============ 9. PROOF ============ */}
       <section className="block proof-sec">
         <div className="wrap">
-          <span className="eyebrow proof-eyebrow">07 · Customers</span>
+          <span className="kicker proof-eyebrow">Customers</span>
         </div>
 
         <Spotlight />
