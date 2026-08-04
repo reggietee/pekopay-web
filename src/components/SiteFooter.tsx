@@ -14,7 +14,7 @@ export default function SiteFooter() {
               />
             </Link>
             <p>
-              The smarter way to process payments — built for businesses that
+              The smarter way to process payments, built for businesses that
               want to earn while they grow.
             </p>
             <p className="foot-address">
@@ -91,27 +91,10 @@ export default function SiteFooter() {
               </li>
             </ul>
           </div>
-          <div className="foot-col">
-            <h5>Company</h5>
-            <ul>
-              <li>
-                <a href="#">About Us</a>
-              </li>
-              <li>
-                <a href="#">Careers</a>
-              </li>
-              <li>
-                <a href="#">Compliance &amp; Fraud Prevention</a>
-              </li>
-            </ul>
-          </div>
+          {/* Company column and Terms/Privacy links removed pending page creation. Restore when /about, /careers, /compliance, /terms, /privacy exist. */}
         </div>
         <div className="foot-bot">
           <span>© 2026 PekoPay, Inc. All Rights Reserved.</span>
-          <div className="links">
-            <a href="#">Terms &amp; Conditions</a>
-            <a href="#">Privacy Policy</a>
-          </div>
         </div>
       </div>
     </footer>

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import CashbackCalculator from "@/components/CashbackCalculator";
 import SiteFooter from "@/components/SiteFooter";
 import SiteHeader from "@/components/SiteHeader";
@@ -35,16 +36,16 @@ export default function Home() {
             <p className="hero-body">
               PekoPay helps businesses accept payments while earning cashback on
               every transaction. Save money, improve cash flow, and grow your
-              business — all from one platform.
+              business, all from one platform.
             </p>
             <div className="hero-ctas">
-              <a className="btn btn-gold btn-lg" href="#signup">
+              <Link className="btn btn-gold btn-lg" href="/login">
                 Start Now
                 <ArrowSvg />
-              </a>
-              <a className="btn btn-outline btn-lg" href="#contact">
+              </Link>
+              <Link className="btn btn-outline btn-lg" href="/contact-us">
                 Talk to Sales
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -100,7 +101,7 @@ export default function Home() {
               </p>
             </div>
             <p className="body">
-              Send invoices, accept payments, and earn cashback—all in one
+              Send invoices, accept payments, and earn cashback, all in one
               platform. With PekoPay&apos;s invoicing feature, businesses can
               streamline collections and watch rewards stack up automatically.
             </p>
@@ -124,7 +125,7 @@ export default function Home() {
               </div>
               <div className="invoice-lines">
                 <div className="invoice-line">
-                  <span>Mooring services — May</span>
+                  <span>Mooring services, May</span>
                   <span className="amt">$4,200.00</span>
                 </div>
                 <div className="invoice-line">
@@ -175,8 +176,8 @@ export default function Home() {
               <h3>Works seamlessly with QuickBooks.</h3>
               <p>
                 Sync your payments and cashback directly into QuickBooks. No
-                manual entry, no reconciliation headaches — just clean books
-                that stay up to date automatically.
+                manual entry and no reconciliation headaches, just books that
+                stay current on their own.
               </p>
             </div>
           </div>
@@ -223,7 +224,7 @@ export default function Home() {
 
           <p className="sec-body-intro">
             Expand your business beyond borders. PekoPay lets you accept
-            payments in over 100 currencies — built for businesses that
+            payments in over 100 currencies, built for businesses that
             don&apos;t stop at the city limit.
           </p>
 
@@ -354,10 +355,13 @@ export default function Home() {
                 save on payment processing.
               </p>
               <div className="partner-cta">
-                <a className="btn btn-gold-on-dark btn-lg" href="#apply">
+                <Link
+                  className="btn btn-gold-on-dark btn-lg"
+                  href="/partnerships/referral-program"
+                >
                   Apply as a partner
                   <ArrowSvg />
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -368,7 +372,7 @@ export default function Home() {
               </div>
               <div className="benefit-row">
                 <span className="benefit-num">— 02</span>
-                <p>No upfront costs — just refer &amp; earn</p>
+                <p>No upfront costs, just refer and earn</p>
               </div>
               <div className="benefit-row">
                 <span className="benefit-num">— 03</span>
@@ -434,7 +438,7 @@ export default function Home() {
       </section>
 
       {/* ============ CLOSING CTA ============ */}
-      <section className="block cta-sec" id="contact">
+      <section className="block cta-sec">
         <div className="wrap">
           <div className="cta-inner">
             <h2>
@@ -446,13 +450,13 @@ export default function Home() {
               transaction with PekoPay. Get started in minutes.
             </p>
             <div className="cta-actions">
-              <a className="btn btn-gold btn-lg" href="#signup">
+              <Link className="btn btn-gold btn-lg" href="/login">
                 Get Started
                 <ArrowSvg />
-              </a>
-              <a className="btn btn-outline btn-lg" href="#contact">
+              </Link>
+              <Link className="btn btn-outline btn-lg" href="/contact-us">
                 Talk to Sales
-              </a>
+              </Link>
             </div>
           </div>
         </div>
