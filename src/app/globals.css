@@ -1416,6 +1416,10 @@ footer {
   color: var(--gold-deep);
   font-weight: 300;
 }
+/* Single power word highlighted in the brand purple/blue (no italics). */
+.accent-word {
+  color: var(--gold-deep);
+}
 .sec-h2 {
   margin-top: 18px;
 }

@@ -29,7 +29,8 @@ export default function Home() {
         <div className="wrap hero-grid">
           <div className="hero-copy">
             <h1>
-              Payments that <span className="italic">pay you back.</span>
+              Payments that pay you{" "}
+              <span className="accent-word">back.</span>
             </h1>
             <p className="hero-sub">
               No contracts. No monthly fees. Cashback on every transaction.
@@ -94,8 +95,8 @@ export default function Home() {
             <div>
               <span className="eyebrow">01 · Platform</span>
               <h2 className="sec-h2">
-                Every way to get paid,{" "}
-                <span className="accent-italic">in one place.</span>
+                Every way to get{" "}
+                <span className="accent-word">paid</span>, in one place.
               </h2>
               <p className="sub">Nine tools, one account, one set of books.</p>
             </div>
@@ -226,8 +227,8 @@ export default function Home() {
             <div>
               <span className="eyebrow">02 · Terms</span>
               <h2 className="sec-h2">
-                Keep your money moving{" "}
-                <span className="accent-italic">on your terms.</span>
+                Keep your money moving on your{" "}
+                <span className="accent-word">terms.</span>
               </h2>
               <p className="sub">
                 No lock-in, no surprises, no waiting on someone else&apos;s
@@ -292,8 +293,8 @@ export default function Home() {
             <div>
               <span className="eyebrow">03 · Cashback</span>
               <h2 className="sec-h2">
-                Earn cashback on{" "}
-                <span className="accent-italic">every payment.</span>
+                Earn <span className="accent-word">cashback</span> on every
+                payment.
               </h2>
               <p className="sub">From your very first transaction.</p>
             </div>
@@ -320,8 +321,8 @@ export default function Home() {
           <div className="why-inner">
             <span className="eyebrow">04 · Why cashback</span>
             <h2 className="sec-h2">
-              How we can{" "}
-              <span className="accent-italic">afford to do this.</span>
+              How we can <span className="accent-word">afford</span> to do
+              this.
             </h2>
             <p>
               It&apos;s the question we get more than any other. Every payment
@@ -351,10 +352,8 @@ export default function Home() {
             <div>
               <span className="eyebrow">05 · Support</span>
               <h2 className="sec-h2">
-                A real person,{" "}
-                <span className="accent-italic">
-                  usually within 30 minutes.
-                </span>
+                A real person, usually within 30{" "}
+                <span className="accent-word">minutes.</span>
               </h2>
               <p className="sub">The part everyone finds out about too late.</p>
             </div>
@@ -404,8 +403,8 @@ export default function Home() {
             <div>
               <span className="eyebrow">06 · Integrations</span>
               <h2 className="sec-h2">
-                Works with the tools{" "}
-                <span className="accent-italic">you already run on.</span>
+                Works with the <span className="accent-word">tools</span> you
+                already run on.
               </h2>
             </div>
             <p className="body">
@@ -520,9 +519,8 @@ export default function Home() {
           <div className="sec-head-center">
             <h2>
               Built in Canada.{" "}
-              <span className="accent-italic">
-                Secured to the highest standard.
-              </span>
+              <span className="accent-word">Secured</span> to the highest
+              standard.
             </h2>
           </div>
 
@@ -570,7 +568,7 @@ export default function Home() {
         <div className="wrap">
           <div className="sec-head-center">
             <h2>
-              Questions we <span className="accent-italic">get a lot.</span>
+              Questions we get a <span className="accent-word">lot.</span>
             </h2>
           </div>
 
@@ -620,8 +618,8 @@ export default function Home() {
         <div className="wrap">
           <div className="cta-inner">
             <h2>
-              Ready to earn cashback on{" "}
-              <span className="accent-italic">every payment?</span>
+              Ready to earn <span className="accent-word">cashback</span> on
+              every payment?
             </h2>
             <p className="cta-body">
               Join businesses across Canada keeping more of what they process.
