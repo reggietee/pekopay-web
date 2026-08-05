@@ -33,7 +33,8 @@ export default function Home() {
               <span className="accent-word">back.</span>
             </h1>
             <p className="hero-sub">
-              No contracts. No monthly fees. Cashback on every transaction.
+              Cashback on every transaction, with no monthly fees and the
+              freedom to leave anytime.
             </p>
             <p className="hero-body">
               PekoPay is a Canadian payment processor built for businesses that
@@ -231,8 +232,7 @@ export default function Home() {
                 <span className="accent-word">terms.</span>
               </h2>
               <p className="sub">
-                No lock-in, no surprises, no waiting on someone else&apos;s
-                schedule.
+                Straightforward terms, and a payout schedule you set yourself.
               </p>
             </div>
             <p className="body">
@@ -247,16 +247,16 @@ export default function Home() {
               <span className="num">— 01</span>
               <h3>No long-term contracts</h3>
               <p>
-                Leave whenever you want. Nothing to cancel, no exit fee, no
-                notice period.
+                Leave whenever you want. Cancelling is instant, with no exit
+                fee.
               </p>
             </div>
             <div className="security-card">
               <span className="num">— 02</span>
               <h3>No monthly fees</h3>
               <p>
-                You pay when you process. When you don&apos;t process, you
-                don&apos;t pay.
+                You pay only when you process a payment, so your costs rise and
+                fall with your sales.
               </p>
             </div>
             <div className="security-card">
@@ -299,16 +299,15 @@ export default function Home() {
               <p className="sub">From your very first transaction.</p>
             </div>
             <p className="body">
-              There&apos;s no volume you have to hit and no tier you have to
-              reach. Every transaction you process earns cashback, whether you
-              run four hundred dollars a month or four hundred thousand.
+              Every transaction you process earns cashback, whether you run four
+              hundred dollars a month or four hundred thousand.
             </p>
           </div>
 
           <ul className="checklist checklist-row">
             <li>Earn from your first transaction</li>
             <li>No minimum volume to qualify</li>
-            <li>No holdbacks and no expiry</li>
+            <li>Paid out in full and yours to keep</li>
           </ul>
 
           <CashbackCalculator />
@@ -331,8 +330,9 @@ export default function Home() {
               back to the business that earned it in the first place.
             </p>
             <p>
-              That&apos;s the whole mechanism. There&apos;s no partner bank
-              funding it, no promotional period, and no clawback later.
+              That&apos;s the whole mechanism. The cashback comes out of our own
+              margin rather than a partner bank or a limited-time promotion, and
+              once you have earned it, it is yours to keep.
             </p>
             <Link
               className="text-link"
@@ -422,11 +422,11 @@ export default function Home() {
               className="qb-logo"
             />
             <div className="qb-copy">
-              <h3>Works seamlessly with QuickBooks.</h3>
+              <h3>Works with QuickBooks.</h3>
               <p>
-                Sync your payments and cashback directly into QuickBooks. No
-                manual entry and no reconciliation headaches, just books that
-                stay current on their own.
+                Sync your payments and cashback directly into QuickBooks. Your
+                books stay current on their own, without manual entry or
+                reconciliation.
               </p>
             </div>
           </div>
@@ -576,8 +576,8 @@ export default function Home() {
             <div className="faq-teaser-item">
               <h3>Is there a contract or a monthly fee?</h3>
               <p>
-                Neither. No long-term commitment, no monthly fee, and nothing to
-                cancel if you decide to leave.
+                Neither. There&apos;s no monthly fee and no contract to lock you
+                in, so you can leave whenever you want.
               </p>
             </div>
             <div className="faq-teaser-item">
